@@ -34,7 +34,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>org.IISH2WorldCat</mainClass>
+                                    <mainClass>org.EAD2ArchivesSpace</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

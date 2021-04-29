@@ -1,0 +1,1424 @@
+<ead:ead xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ead="urn:isbn:1-931666-22-9"
+         xsi:schemaLocation="urn:isbn:1-931666-22-9 https://www.loc.gov/ead/ead.xsd http://www.w3.org/1999/xlink http://www.loc.gov/standards/xlink/xlink.xsd">
+    <ead:eadheader langencoding="iso639-2b" dateencoding="iso8601" countryencoding="iso3166-1"
+                   repositoryencoding="iso15511" scriptencoding="iso15924" relatedencoding="MARC21">
+        <ead:eadid countrycode="NL" mainagencycode="NL-AmISG" identifier="hdl:10622/ARCH00248">
+            https://hdl.handle.net/10622/ARCH00248
+        </ead:eadid>
+        <ead:filedesc>
+            <ead:titlestmt>
+                <ead:titleproper>Claire Auzias Collection</ead:titleproper>
+                <ead:subtitle>Finding aid</ead:subtitle>
+            </ead:titlestmt>
+            <ead:publicationstmt>
+                <ead:publisher encodinganalog="260$b">International Institute of Social History</ead:publisher>
+                <ead:address>
+                    <ead:addressline>Cruquiusweg 31</ead:addressline>
+                    <ead:addressline>1019 AT Amsterdam</ead:addressline>
+                    <ead:addressline>The Netherlands</ead:addressline>
+                </ead:address>
+            </ead:publicationstmt>
+        </ead:filedesc>
+        <ead:profiledesc>
+            <ead:creation>Finding aid created by IISH Collection Processing Department</ead:creation>
+            <ead:langusage>Finding aid is in
+                <ead:language langcode="eng">English</ead:language>
+            </ead:langusage>
+        </ead:profiledesc>
+        <ead:revisiondesc>
+            <ead:change>
+                <ead:date normal="20130630" calendar="gregorian" era="ce">30 June 2013</ead:date>
+                <ead:item>Adapted to the national and international best practices, regrouping the dscgrp’s according to
+                    ISAD(G)
+                </ead:item>
+            </ead:change>
+            <ead:change>
+                <ead:date normal="20111103" calendar="gregorian" era="ce">3 November 2011</ead:date>
+                <ead:item>Changed to locgov standard and assigned PID 10622/ARCH00248
+                    for local legacy ID 10739104
+                </ead:item>
+            </ead:change>
+        </ead:revisiondesc>
+    </ead:eadheader>
+    <ead:archdesc level="collection" type="inventory" relatedencoding="MARC21">
+        <ead:did>
+            <ead:head>Collection Summary</ead:head>
+            <ead:unittitle label="Title" encodinganalog="245$a">Claire Auzias Collection</ead:unittitle>
+            <ead:unitdate type="inclusive" label="Period" encodinganalog="245$f" normal="1977/1985">1977-1985
+            </ead:unitdate>
+            <ead:unitid repositorycode="NL-AmsISG" label="Collection ID" countrycode="NL" encodinganalog="852$j">
+                ARCH00248
+            </ead:unitid>
+            <ead:origination label="Creator">
+                <ead:persname encodinganalog="100$a">Auzias, Claire</ead:persname>
+            </ead:origination>
+            <ead:physdesc label="Physical Description">
+                <ead:extent encodinganalog="300$a" label="Extent" unit="meter">1.20 m.</ead:extent>
+                <ead:extent unit="bytes" label="Extent" encodinganalog="300$a">83.9 GB</ead:extent>
+            </ead:physdesc>
+            <ead:langmaterial label="Language Material" encodinganalog="546$a">
+                <ead:language langcode="fre" encodinganalog="041$a">French</ead:language>
+            </ead:langmaterial>
+            <ead:repository encodinganalog="852$a" label="Repository">
+                <ead:corpname>International Institute of Social History</ead:corpname>
+                <ead:address>
+                    <ead:addressline>Cruquiusweg 31</ead:addressline>
+                    <ead:addressline>1019 AT Amsterdam</ead:addressline>
+                    <ead:addressline>The Netherlands</ead:addressline>
+                </ead:address>
+            </ead:repository>
+        </ead:did>
+        <ead:descgrp type="context">
+            <ead:head>Context</ead:head>
+            <ead:bioghist encodinganalog="545$a">
+                <ead:head>Biographical Note</ead:head>
+                <ead:p>Born Lyon 1951; French historian, feminist and libertarian; published on the history of the
+                    syndicalist movement, anarchism and on the Roma. In 1980 she defended a doctoral thesis in history
+                    at Lyon-II University on the oral memory of the libertarian movements in Lyon during the
+                    Interbellum.The interviews in this collection form the basis of this thesis. Researcher at the
+                    Socius laboratory of the Technical University of Lisbon. Member of the editorial committee of the
+                    Revue Chimères. Author of  <ead:title>La grève des ovalistes; Lyon juin-juillet 1869</ead:title>,
+                    Claire Auzias was interviewed herself by Mimmo Pucciarelli:  <ead:title>Claire l'enragée</ead:title> (Atelier
+                    de Creation Libertaire, 2007).
+                </ead:p>
+            </ead:bioghist>
+            <ead:acqinfo encodinganalog="541$a">
+                <ead:head>Acquisition</ead:head>
+                <ead:p>Collection donated to the IISH by
+                    Claire Auzias in <ead:date>1985</ead:date>, with an accrual in 2013.
+                </ead:p>
+            </ead:acqinfo><!--acqinfo removed.
+                --><!--acqinfo removed.
+                -->
+        </ead:descgrp>
+        <ead:descgrp type="content_and_structure">
+            <ead:head>Content and Structure</ead:head>
+            <ead:scopecontent encodinganalog="520$a">
+                <ead:head>Content</ead:head>
+                <ead:p>32 digitized audiotapes and 30 digitized audiocassettes with interviews with libertarians.
+                    Transcriptions of interviews, copies of documents, notes and bibliographical references relating to
+                    Auzias' publications 'La grève des ovalistes: Lyon juin-juillet 1869' and 'Mémoires libertaires:
+                    Lyon 1919-1939'. In the introduction of this thesis Auzias wrote: "Dix-huit militants libertaires
+                    furent questionnes des heures durant sur ce que fut leur activite politique et syndicale, leur vie
+                    familiale, profesionnelle, associative, culturelle. Tous accepterent notre intrusion dans leur passe
+                    avec plus que complaisance, chaleur et soutien. Ils recurent ce projet avec une extreme courtoisie,
+                    nous aidant de conseils, directions de recherches, suggestions et remarques qui, souvent, nous
+                    tirent d'embarras. Ils mirent a notre disposition leurs temoignages et reflexions, leurs documents
+                    prives: presse, brochures, photographies. Ce travail, en remerciements et en symphaties, leurs est
+                    dedie: sans eux, il n'eut ete cette approche orale du mouvement libertaire" (Eighteen libertarian
+                    activists were questioned for hours about what was their political and trade union activities, their
+                    family life, professional, associative, cultural. All accepted our intrusion into their past with
+                    more than complacency, warmth and support. They received this project with extreme courtesy, helping
+                    us with advice, directions for research, suggestions and remarks that often help us out. They put at
+                    their disposal their testimonies and reflections, their private documents: press, pamphlets,
+                    photographs. This work, in thanks and sympathy, is dedicated to them: without them, it was not this
+                    oral approach of the libertarian movement).
+                </ead:p>
+                <ead:p>Some interviews (Gaston Illy, 1977) held by Daniel Colson and Annik Houel.</ead:p>
+                <ead:p>In the edition of 1993 of her thesis she writes more specific on role/profession of her sources
+                    (p. 12).
+                </ead:p>
+                <ead:p>Accrual 2013 (photocopies from CIRA in Lausanne, Switzerland): transcriptions of interviews held
+                    by Claire Auzias with Louis Buronfosse 1977, Marius Chabany 1977, Antoine Marsella and Marie-Louise
+                    Marsella-Massoubre 1977, 1980, Pierre Masneuf 1978 and Lorenzo Ruiperez 1977, 1979.
+                </ead:p>
+            </ead:scopecontent>
+            <ead:controlaccess>
+                <ead:head>Subjects</ead:head>
+                <ead:controlaccess>
+                    <ead:head>Geographic Names</ead:head>
+                    <ead:geogname encodinganalog="044$c" role="country of origin" normal="FR">France</ead:geogname>
+                </ead:controlaccess>
+                <ead:controlaccess>
+                    <ead:head>Persons</ead:head>
+                    <ead:persname encodinganalog="600$a" role="subject">Angelini</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Buronfosse, Louis</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Chabany, Marius</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Chirat, Pierre</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Eyraud, Janette</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Eyraud, Regis</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Forgues, Auguste</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Illy, Gaston</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Lavorel, M.</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Marsella, Antoine</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Marsella, M.L.</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Masneuf, Pierre</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Navel, Georges</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Navel-Fort, Marguerite</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Padros, Jaime</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Rosso, O</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject">Ruiperez, Lorenzo</ead:persname>
+                    <ead:persname encodinganalog="600$a" role="subject"/>
+                </ead:controlaccess>
+                <ead:controlaccess>
+                    <ead:head>Themes</ead:head>
+                    <ead:subject encodinganalog="650$a">Syndicalism/Trade unions</ead:subject>
+                    <ead:subject encodinganalog="650$a">Feminist movements/Women's movements</ead:subject>
+                    <ead:subject encodinganalog="650$a">Anarchist movements</ead:subject>
+                </ead:controlaccess>
+                <ead:controlaccess>
+                    <ead:head>Material Type</ead:head>
+                    <ead:genreform encodinganalog="655$a">Archival material</ead:genreform>
+                    <ead:genreform encodinganalog="655$a">Sound documents</ead:genreform>
+                    <ead:genreform encodinganalog="655$a">Ephemera</ead:genreform>
+                    <ead:genreform encodinganalog="655$a">Serials</ead:genreform>
+                </ead:controlaccess>
+            </ead:controlaccess>
+        </ead:descgrp>
+        <ead:descgrp type="access_and_use">
+            <ead:head>Access and Use</ead:head>
+            <ead:accessrestrict encodinganalog="506$a">
+                <ead:head>Access</ead:head>
+                <ead:p>Not restricted</ead:p>
+                <ead:p>Used to be 'restricted' with the addition 'to be determined' (acq. 1985).</ead:p>
+            </ead:accessrestrict>
+            <ead:prefercite encodinganalog="524$a">
+                <ead:head>Preferred Citation</ead:head>
+                <ead:p>Claire Auzias Collection, inventory number ..., International Institute of Social History,
+                    Amsterdam
+                </ead:p>
+            </ead:prefercite>
+        </ead:descgrp>
+        <ead:dsc type="combined">
+            <ead:head>List</ead:head>
+            <ead:c01 level="series">
+                <ead:did>
+                    <ead:unittitle>Audio tapes</ead:unittitle>
+                </ead:did>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>1-3</ead:unitid>
+                        <ead:unittitle>Interview with Georges Navel.
+                            <ead:unitdate>1978.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>ca. 190 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>Former Call numbers: BG GB1/962-964.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>1</ead:unitid>
+                            <ead:unittitle>Audio tape 1.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>2</ead:unitid>
+                            <ead:unittitle>Audio tape 2.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>3</ead:unitid>
+                            <ead:unittitle>Audio tape 3.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>4-9</ead:unitid>
+                        <ead:unittitle>Interview with Marguerite Navel-Fort.
+                            <ead:unitdate>1978-1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>ca. 390 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>Former Call numbers: BG GB1/433 (tape 4) and GB1/965-970 (tapes 5-10).</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>4</ead:unitid>
+                            <ead:unittitle>Audio tape 4.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>5</ead:unitid>
+                            <ead:unittitle>Audio tape 5.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="file">
+                        <ead:did>
+                            <ead:unitid>6</ead:unitid>
+                            <ead:unittitle>Audio tape 6.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>7</ead:unitid>
+                            <ead:unittitle>Audio tape 7.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>8</ead:unitid>
+                            <ead:unittitle>Audio tape 8.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>9</ead:unitid>
+                            <ead:unittitle>Audio tape 9.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>10</ead:unitid>
+                            <ead:unittitle>Audio tape 10.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>11-13</ead:unitid>
+                        <ead:unittitle>Interview with Gaston Illy.
+                            <ead:unitdate>1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>ca. 170 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>Former Call numbers: GB1/977-979.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>11</ead:unitid>
+                            <ead:unittitle>Audio tape 11.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>12</ead:unitid>
+                            <ead:unittitle>Audio tape 12.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>13</ead:unitid>
+                            <ead:unittitle>Audio tape 13.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>14-17</ead:unitid>
+                        <ead:unittitle>Interview with O. Rosso.
+                            <ead:unitdate>1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>ca. 340 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers GB1/980-983.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>14</ead:unitid>
+                            <ead:unittitle>Audio tape 14.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>15</ead:unitid>
+                            <ead:unittitle>Audio tape 15.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>16</ead:unitid>
+                            <ead:unittitle>Audio tape 16.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>17</ead:unitid>
+                            <ead:unittitle>Audio tape 17.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>18-23</ead:unitid>
+                        <ead:unittitle>Interview with Pierre Masneuf.
+                            <ead:unitdate>1978.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>ca. 260 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>Former Call numbers; BG GB1/984-989.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>18</ead:unitid>
+                            <ead:unittitle>Audio tape 18.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>19</ead:unitid>
+                            <ead:unittitle>Audio tape 19.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>20</ead:unitid>
+                            <ead:unittitle>Audio tape 20.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="file">
+                        <ead:did>
+                            <ead:unitid>21</ead:unitid>
+                            <ead:unittitle>Audio tape 21.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>22</ead:unitid>
+                            <ead:unittitle>Audio tape 22.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>23</ead:unitid>
+                            <ead:unittitle>Audio tape 23.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>24-29</ead:unitid>
+                        <ead:unittitle>Interview with Jaime Padros.
+                            <ead:unitdate>1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>ca. 330 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>Former Call numbers: BG GB1/990-995.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>24</ead:unitid>
+                            <ead:unittitle>Audio tape 24.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>25</ead:unitid>
+                            <ead:unittitle>Audio tape 25.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>26</ead:unitid>
+                            <ead:unittitle>Audio tape 26.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>27</ead:unitid>
+                            <ead:unittitle>Audio tape 27.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>28</ead:unitid>
+                            <ead:unittitle>Audio tape 28.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>29</ead:unitid>
+                            <ead:unittitle>Audio tape 29.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>30-32</ead:unitid>
+                        <ead:unittitle>Interview with unknown person
+                            <ead:unitdate>1978.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>ca. 170 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call numbers: BG GB1/996-998.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>30</ead:unitid>
+                            <ead:unittitle>Audio tape 30.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>31</ead:unitid>
+                            <ead:unittitle>Audio tape 31.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>32</ead:unitid>
+                            <ead:unittitle>Audio tape 32.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+            </ead:c01>
+            <ead:c01 level="series">
+                <ead:did>
+                    <ead:unittitle>Audio cassettes</ead:unittitle>
+                </ead:did>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>33-34</ead:unitid>
+                        <ead:unittitle>Interview with Pierre Chirat.
+                            <ead:unitdate>5-12-1981.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>94 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>NB. Former Call Number: BG GC1/90.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>33</ead:unitid>
+                            <ead:unittitle>Audiocassette 1, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>34</ead:unitid>
+                            <ead:unittitle>Audiocassette 1, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>35-36</ead:unitid>
+                        <ead:unittitle>Interview with Angelini
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>76 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Number: BG GC1/91.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>35</ead:unitid>
+                            <ead:unittitle>Audiocassette 2, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>36</ead:unitid>
+                            <ead:unittitle>Audiocassette 2, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>37-40</ead:unitid>
+                        <ead:unittitle>Interview with Auguste Forgue
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>136 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers BG GC1/92 A-B.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>37</ead:unitid>
+                            <ead:unittitle>Audiocassette 3, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>38</ead:unitid>
+                            <ead:unittitle>Audiocassette 3, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>39</ead:unitid>
+                            <ead:unittitle>Audiocassette 4, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>40</ead:unitid>
+                            <ead:unittitle>Audiocassette 4, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>41-42</ead:unitid>
+                        <ead:unittitle>Interview with Peau D'Ane alias Louis Buronfosse
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>28 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers: BG GC1/93.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>41</ead:unitid>
+                            <ead:unittitle>Audiocassette 5, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>42</ead:unitid>
+                            <ead:unittitle>Audiocassette 5, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>43-44</ead:unitid>
+                        <ead:unittitle>Interview with M. Lavorel
+                            <ead:unitdate>1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>45 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers: BG GC1/94.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>43</ead:unitid>
+                            <ead:unittitle>Audiocassette 6, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>44</ead:unitid>
+                            <ead:unittitle>Audiocassette 6, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>45-46</ead:unitid>
+                        <ead:unittitle>Interview with Regis &amp; Janette Eyraud
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>39 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers: BG GC1/95.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>45</ead:unitid>
+                            <ead:unittitle>Audiocassette 7, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>46</ead:unitid>
+                            <ead:unittitle>Audiocassette 7, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>47-50</ead:unitid>
+                        <ead:unittitle>Interview with Marius Chabany
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>93 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers: BG GC1/96 A-B.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>47</ead:unitid>
+                            <ead:unittitle>Audiocassette 8; Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>48</ead:unitid>
+                            <ead:unittitle>Audiocassette 8; Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>49</ead:unitid>
+                            <ead:unittitle>Audiocassette 9; Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>50</ead:unitid>
+                            <ead:unittitle>Audiocassette 9; Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>51-58</ead:unitid>
+                        <ead:unittitle>Interview with Jaime Padros
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>245 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers BG GC1/97 A-B-C-D.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>51</ead:unitid>
+                            <ead:unittitle>Audiocassette 10, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>52</ead:unitid>
+                            <ead:unittitle>Audiocassette 10, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>53</ead:unitid>
+                            <ead:unittitle>Audiocassette 11, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>54</ead:unitid>
+                            <ead:unittitle>Audiocassette 11, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>55</ead:unitid>
+                            <ead:unittitle>Audiocassette 12, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>56</ead:unitid>
+                            <ead:unittitle>Audiocassette 12, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>57</ead:unitid>
+                            <ead:unittitle>Audiocassette13, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>58</ead:unitid>
+                            <ead:unittitle>Audiocassette 13, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>59-66</ead:unitid>
+                        <ead:unittitle>Interview with Odino Rosso
+                            <ead:unitdate>1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>248 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers BG GC1/98 A-D.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>59</ead:unitid>
+                            <ead:unittitle>Audiocassette 14, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>60</ead:unitid>
+                            <ead:unittitle>Audiocassette 14, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>61</ead:unitid>
+                            <ead:unittitle>Audiocassette 15, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>62</ead:unitid>
+                            <ead:unittitle>Audiocassette 15, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>63</ead:unitid>
+                            <ead:unittitle>Audiocassette 16, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>64</ead:unitid>
+                            <ead:unittitle>Audiocassette 16, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>65</ead:unitid>
+                            <ead:unittitle>Audiocassette 17, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>66</ead:unitid>
+                            <ead:unittitle>Audiocassette 17, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>67-78</ead:unitid>
+                        <ead:unittitle>Interviews with Antoine and M.L. Marsella
+                            <ead:unitdate>1976, 1977, 1980.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>314 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>N.B. Former Call Numbers BG GC1/99 ABC-101 AB.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>67</ead:unitid>
+                            <ead:unittitle>Audiocassette 18, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>68</ead:unitid>
+                            <ead:unittitle>Audiocassette 18, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>69</ead:unitid>
+                            <ead:unittitle>Audiocassette 19, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>70</ead:unitid>
+                            <ead:unittitle>Audiocassette 19, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>71</ead:unitid>
+                            <ead:unittitle>Audiocassette 20, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>72</ead:unitid>
+                            <ead:unittitle>Audiocassette 20, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>73</ead:unitid>
+                            <ead:unittitle>Audiocassette 21, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>74</ead:unitid>
+                            <ead:unittitle>Audiocassette 21, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>75</ead:unitid>
+                            <ead:unittitle>Audiocassette 22, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>76</ead:unitid>
+                            <ead:unittitle>Audiocassette 22, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>77</ead:unitid>
+                            <ead:unittitle>Audiocassette 23, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>78</ead:unitid>
+                            <ead:unittitle>Audiocassette 23, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>79-92</ead:unitid>
+                        <ead:unittitle>Interview with Lorenzo Ruiperez
+                            <ead:unitdate>1977, 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>471 min</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                    <ead:odd>
+                        <ead:p>NB. Former Call Numbers BG GC1/102-105.</ead:p>
+                    </ead:odd>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>79</ead:unitid>
+                            <ead:unittitle>Audiocassette 24, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>80</ead:unitid>
+                            <ead:unittitle>Audiocassette 24, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>81</ead:unitid>
+                            <ead:unittitle>Audiocassette 25, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>82</ead:unitid>
+                            <ead:unittitle>Audiocassette 25, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>83</ead:unitid>
+                            <ead:unittitle>Audiocassette 26, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>84</ead:unitid>
+                            <ead:unittitle>Audiocassette 26, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>85</ead:unitid>
+                            <ead:unittitle>Audiocassette 27, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>86</ead:unitid>
+                            <ead:unittitle>Audiocassette 27, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>87</ead:unitid>
+                            <ead:unittitle>Audiocassette 28, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>88</ead:unitid>
+                            <ead:unittitle>Audiocassette 28, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>89</ead:unitid>
+                            <ead:unittitle>Audiocassette 29, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>90</ead:unitid>
+                            <ead:unittitle>Audiocassette 29, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>91</ead:unitid>
+                            <ead:unittitle>Audiocassette 30, Side A.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                    <ead:c03 level="item">
+                        <ead:did>
+                            <ead:unitid>92</ead:unitid>
+                            <ead:unittitle>Audiocassette 30, Side B.</ead:unittitle>
+                        </ead:did>
+                    </ead:c03>
+                </ead:c02>
+            </ead:c01>
+            <ead:c01 level="series">
+                <ead:did>
+                    <ead:unittitle>Typoscripts</ead:unittitle>
+                </ead:did>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>93</ead:unitid>
+                        <ead:unittitle>Previsite Marcel Jaccoud.
+                            <ead:unitdate>2-2-1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>94-95</ead:unitid>
+                        <ead:unittitle>Typoscript interviews Lorenzo Ruiperez.
+                            <ead:unitdate>1977-1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>2 folders</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>96-99</ead:unitid>
+                        <ead:unittitle>Typoscript interviews O. Rosso.
+                            <ead:unitdate>1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>3 folders</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>100-102</ead:unitid>
+                        <ead:unittitle>Typoscript interviews Jaime Padros.
+                            <ead:unitdate>1977-1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>3 folders</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>103</ead:unitid>
+                        <ead:unittitle>Typoscript interview with Angelini.
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>104</ead:unitid>
+                        <ead:unittitle>Typoscript interview Regis &amp; Jeanette Eyraud.
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>105-106</ead:unitid>
+                        <ead:unittitle>Typoscript interview Gaston Illi.
+                            <ead:unitdate>1977-1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>2 folders</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+            </ead:c01>
+            <ead:c01 level="series">
+                <ead:did>
+                    <ead:unittitle>Accrual</ead:unittitle>
+                </ead:did>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>107</ead:unitid>
+                        <ead:unittitle>Typoscript interview with Marius Chabany.
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>108</ead:unitid>
+                        <ead:unittitle>Typoscript interview Louis Buronfosse.
+                            <ead:unitdate>1977.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>109-112</ead:unitid>
+                        <ead:unittitle>Typoscript interview Pierre Masneuf.
+                            <ead:unitdate>1978.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>4 folders</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>113-114</ead:unitid>
+                        <ead:unittitle>Typoscript interview Antoine and Marie-Louise Marsella.
+                            <ead:unitdate>1977-1980.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>2 folders</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>115-116</ead:unitid>
+                        <ead:unittitle>Typoscript interview Lorenzo Ruiperez.
+                            <ead:unitdate>1977-1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>2 folders</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+            </ead:c01>
+            <ead:c01 level="series">
+                <ead:did>
+                    <ead:unittitle>Notes and documentation</ead:unittitle>
+                </ead:did>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>117</ead:unitid>
+                        <ead:unittitle>On a.o. Spanish civil war, Sacco &amp; Vanzetti, Groupe Libertaire 1928 and 1929.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>118</ead:unitid>
+                        <ead:unittitle>On a.o. "NID rouge".
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>119</ead:unitid>
+                        <ead:unittitle>On a.o. Affaire Vial, Front social, Comité d'Action libertaire, Libertaires
+                            Italiens a Lyon.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>120</ead:unitid>
+                        <ead:unittitle>On a.o. Groupes individualistes libertaires.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>121</ead:unitid>
+                        <ead:unittitle>On a.o. groupe communiste libertaire.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>122</ead:unitid>
+                        <ead:unittitle>On a.o. Groupe de libre discussion.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>123</ead:unitid>
+                        <ead:unittitle>On a.o. Causeries populaires, groupe esperanto ouvrier, informations
+                            biographiques.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>124</ead:unitid>
+                        <ead:unittitle>On a.o. Comité des Syndicats Revolutionaires, CGT-SR (Confédération Générale du
+                            Travail-Syndicaliste Révolutionnaire).
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>125</ead:unitid>
+                        <ead:unittitle>On a.o. La pensée libre, jeunesse syndicaliste de Lyon.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>126</ead:unitid>
+                        <ead:unittitle>On a.o. Cercle USR.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>127</ead:unitid>
+                        <ead:unittitle>On a.o. coopératives ouvrières, le SFIO.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>128</ead:unitid>
+                        <ead:unittitle>On a.o. Théâtre du peuple, Front populaire.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>129</ead:unitid>
+                        <ead:unittitle>On a.o. groupes libertaires Espagnoles a Lyon.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>130</ead:unitid>
+                        <ead:unittitle>On a.o. Comité de Défense sociale.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>131</ead:unitid>
+                        <ead:unittitle>On a.o. Cercle syndicaliste, jeunesse ouvrière.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                        <ead:physdesc>
+                            <ead:extent>1 folder</ead:extent>
+                        </ead:physdesc>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>132</ead:unitid>
+                        <ead:unittitle>On a.o. A.D.R 1922-1924.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>133</ead:unitid>
+                        <ead:unittitle>On Premier Mai and A.D.R. 1914-1937.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>134</ead:unitid>
+                        <ead:unittitle>
+                            <ead:title>Le Combat</ead:title>
+                            and printed matter of CNT.
+                            <ead:unitdate>1930-1970.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>135</ead:unitid>
+                        <ead:unittitle>Photocopies of de <ead:title>Progrès- Lyon</ead:title>, 1919-1939.
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="fonds">
+                    <ead:did>
+                        <ead:unitid>136</ead:unitid>
+                        <ead:unittitle>Photocopies of Archives Chirat "Le libre Examen", Lyon 1934.</ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>137</ead:unitid>
+                        <ead:unittitle>On a.o. Comité pour la 3ème internationale and Propagande electorale (Nationale
+                            et Lyon) 1936.
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>138</ead:unitid>
+                        <ead:unittitle>Photocopies librarybooks, before 1940.</ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="fonds">
+                    <ead:did>
+                        <ead:unitid>139</ead:unitid>
+                        <ead:unittitle>Photocopies on a.o. Affaire Calzan, Cuminal (1918).</ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>140</ead:unitid>
+                        <ead:unittitle>Photocopies ADR and NID-Rouge (1917-1918).</ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>141</ead:unitid>
+                        <ead:unittitle>Alphabetical cards: A-J : "Biographie, hommes et femmes des mouvements
+                            libertaires Lyonnais; natifs, émigrés ou passants".
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>142</ead:unitid>
+                        <ead:unittitle>Alphabetical cards: K-Z : "Biographie, hommes et femmes des mouvements
+                            libertaires Lyonnais; natifs, émigrés ou passants".
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>143-146</ead:unitid>
+                        <ead:unittitle>Cards with references literature and " éléments biographiques".
+                            <ead:unitdate>ca. 1979.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>147-148</ead:unitid>
+                        <ead:unittitle>Newspaper clippings.
+                            <ead:unitdate>1927-1936.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+                <ead:c02 level="file">
+                    <ead:did>
+                        <ead:unitid>149</ead:unitid>
+                        <ead:unittitle>Newspapers <ead:title>Lyon Soir</ead:title>,<ead:title>Le Nouvelliste</ead:title>, <ead:title>
+                            Le progrès</ead:title>.
+                            <ead:unitdate>1939-1940.</ead:unitdate>
+                        </ead:unittitle>
+                    </ead:did>
+                </ead:c02>
+            </ead:c01>
+        </ead:dsc>
+    </ead:archdesc>
+</ead:ead>

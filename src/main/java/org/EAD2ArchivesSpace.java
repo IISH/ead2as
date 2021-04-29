@@ -9,7 +9,7 @@ import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class IISH2WorldCat {
+public class EAD2ArchivesSpace {
 
 
     final TransformerFactory tf = TransformerFactory.newInstance();
@@ -17,15 +17,15 @@ public class IISH2WorldCat {
     private ArrayList<Transformer> transformers = new ArrayList(2);
     private static Validate validate;
 
-    private IISH2WorldCat() {
+    private EAD2ArchivesSpace() {
 
-        try {
-            validate = new Validate();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        }
+//        try {
+//            validate = new Validate();
+//        } catch (SAXException e) {
+//            e.printStackTrace();
+//        }
 
-        String[] _transformers = {"/iish.archieven.xsl"};
+        String[] _transformers = {"/1.identity.xsl"};
         for (String _transformer : _transformers) {
 
             final URL resource = this.getClass().getResource(_transformer);
@@ -79,11 +79,11 @@ public class IISH2WorldCat {
             FileOutputStream fos = new FileOutputStream(target);
             fos.write(record);
 
-            String msg = validate.validate(target);
-            if (msg != null) {
-                System.out.println("Invalid MarcXML: " + target.getAbsolutePath());
-                System.out.println(msg);
-            }
+//            String msg = validate.validate(target);
+//            if (msg != null) {
+//                System.out.println("Invalid MarcXML: " + target.getAbsolutePath());
+//                System.out.println(msg);
+//            }
         }
     }
 
@@ -102,6 +102,6 @@ public class IISH2WorldCat {
      */
     public static void main(String[] args) throws IOException, TransformerException {
 
-        new IISH2WorldCat().migrate(args[0], args[1]);
+        new EAD2ArchivesSpace().migrate(args[0], args[1]);
     }
 }
