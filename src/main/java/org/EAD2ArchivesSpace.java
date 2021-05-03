@@ -25,7 +25,8 @@ public class EAD2ArchivesSpace {
             e.printStackTrace();
         }
 
-        String[] _transformers = {"/1.identity.xsl"};
+//        String[] _transformers = {"/1.identity.xsl"};
+        String[] _transformers = {"/ar-2.xsl", "/ar-20.xsl"};
         for (String _transformer : _transformers) {
 
             final URL resource = this.getClass().getResource(_transformer);
