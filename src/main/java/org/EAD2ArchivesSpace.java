@@ -19,11 +19,11 @@ public class EAD2ArchivesSpace {
 
     private EAD2ArchivesSpace() {
 
-//        try {
-//            validate = new Validate();
-//        } catch (SAXException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            validate = new Validate();
+        } catch (SAXException e) {
+            e.printStackTrace();
+        }
 
         String[] _transformers = {"/1.identity.xsl"};
         for (String _transformer : _transformers) {
@@ -79,11 +79,11 @@ public class EAD2ArchivesSpace {
             FileOutputStream fos = new FileOutputStream(target);
             fos.write(record);
 
-//            String msg = validate.validate(target);
-//            if (msg != null) {
-//                System.out.println("Invalid MarcXML: " + target.getAbsolutePath());
-//                System.out.println(msg);
-//            }
+            String msg = validate.validate(target);
+            if (msg != null) {
+                System.out.println("Invalid EAD xml document: " + target.getAbsolutePath());
+                System.out.println(msg);
+            }
         }
     }
 
