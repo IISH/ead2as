@@ -48,7 +48,7 @@ public class EAD2ArchivesSpace {
 
     }
 
-    private void migrate(String source_folder, String target_folder) throws IOException, TransformerException {
+    private void run(String source_folder, String target_folder) throws IOException, TransformerException {
 
         final File[] source_files = new File(source_folder).listFiles();
         if (source_files == null) {
@@ -68,18 +68,20 @@ public class EAD2ArchivesSpace {
             final int length = (int) source_file.length();
             byte[] record = new byte[length];
 
-            source.read(record, 0, length);
+            final int result = source.read(record, 0, length);
 
-            System.out.println(source_file.getAbsolutePath());
+            final String name = source_file.getName();
+
+            System.out.println(source_file.getAbsolutePath() + " " + result + " " + name);
             for (Transformer transformer : transformers) {
                 record = convertRecord(transformer, record);
             }
 
-            File target = new File(targetFolder, source_file.getName());
-            FileOutputStream fos = new FileOutputStream(target);
+            final File target = new File(targetFolder, name);
+            final FileOutputStream fos = new FileOutputStream(target);
             fos.write(record);
 
-            String msg = validate.validate(target);
+            final String msg = validate.validate(target);
             if (msg != null) {
                 System.out.println("Invalid EAD xml document: " + target.getAbsolutePath());
                 System.out.println(msg);
@@ -102,6 +104,11 @@ public class EAD2ArchivesSpace {
      */
     public static void main(String[] args) throws IOException, TransformerException {
 
-        new EAD2ArchivesSpace().migrate(args[0], args[1]);
+        final String in = args[0];
+        final String out = args[1];
+
+        System.out.println("In " + in);
+        System.out.println("Out " + out);
+        new EAD2ArchivesSpace().run(in, out);
     }
 }

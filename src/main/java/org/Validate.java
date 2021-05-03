@@ -30,8 +30,9 @@ public class Validate {
 
         final Source source = new StreamSource(file);
 
+        validator.reset();
+
         try {
-            validator.reset();
             validator.validate(source);
             return null;
         } catch (SAXException ex) {
