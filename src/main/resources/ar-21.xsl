@@ -9,6 +9,6 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:daogrp/ead:daoloc[@xlink:label='pdf']"/>
+    <xsl:template match="ead:dsc/ead:c01//ead:physdesc/ead:extent"/>
 
 </xsl:stylesheet>

@@ -27,7 +27,8 @@ public class EAD2ArchivesSpace {
 
 //        String[] _transformers = {"/1.identity.xsl"};
 //        String[] _transformers = {"/ar-2.xsl", "/ar-12.xsl", "/ar-20.xsl"}; // lwo
-        String[] _transformers = { "/ar-11.xsl" }; // gcu
+//        String[] _transformers = { "/ar-3.xsl", "/ar-11.xsl", "/ar-21.xsl", "/ar-24.xsl" }; // gcu
+        String[] _transformers = { "/ar-21.xsl" }; // gcu
         for (String _transformer : _transformers) {
 
             final URL resource = this.getClass().getResource(_transformer);
