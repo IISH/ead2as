@@ -9,6 +9,11 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:acqinfo"/>
+    <xsl:template match="ead:physdesc/ead:extent[@unit='meter']">
+        <xsl:copy>
+            <xsl:apply-templates select="@*" />
+            <xsl:value-of select="normalize-space(translate(node(),',','.'))" />
+        </xsl:copy>
+    </xsl:template>
 
 </xsl:stylesheet>
