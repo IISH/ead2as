@@ -9,6 +9,8 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:dsc/ead:c01//ead:physdesc/ead:extent"/>
+    <xsl:template match="ead:dsc//ead:physdesc/ead:genreform">
+        <xsl:apply-templates/>
+    </xsl:template>
 
 </xsl:stylesheet>
