@@ -38,7 +38,9 @@
     <head>Inhoud en structuur</head><scopecontent encodinganalog="520$a"> 
       <head>Inhoud</head> <p>Correspondentie, stukken betreffende persoonlijke administratie, gevolgde cursussen en dienstverbanden 1937-1983.</p>
       </scopecontent>  <processinfo encodinganalog="583$a"> <head>Bewerking</head> <p>Inventaris gemaakt door Piet Lourens in 2020, geëdit door Bouwe Hijma in datzelfde jaar.</p>
-      </processinfo><controlaccess><head>Onderwerpen</head><controlaccess> 
+      </processinfo>
+<controlaccess><head>Onderwerpen</head>
+<controlaccess> 
         <head>Geografische namen</head><geogname encodinganalog="044$c" role="country of origin" normal="NL">Netherlands</geogname>
         
         </controlaccess>
@@ -58,24 +60,45 @@
         <c02 level="file">
             <did><unitid>1</unitid><unittitle>Kasboek. Met bijlagen. <unitdate>1936-1941.</unitdate></unittitle>
                 <physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>2</unitid><unittitle>Handleiding met voorbeelden. Girokantoor der Gemeente Amsterdam. 20e druk. 1941 en Giroboekje verstrekt door het Girokantoor der Gemeente Amsterdam. 1943-1952. <unitdate>1941, 1943-1952.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>3</unitid><unittitle>Stukken betreffende de inkomstenbelasting 1951-1957 en de personele belasting 1955-1956. <unitdate>1951-1957.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>4</unitid><unittitle>Stukken betreffende de betaling van Schoolgeld. <unitdate>1963-1964.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>5</unitid><unittitle>Register betreffende lopende verzekeringen 1949-1983 en vaste betalingen 1957-1970. <unitdate>1949-1983.</unitdate></unittitle><physdesc>
-<extent>1 deel</extent></physdesc></did></c02><c02 level="file"><did><unitid>6</unitid><unittitle>6	12x fl.1.000 en 8x fl.250 aandelen Nieuwe Nederlandsch-Amerikaansche Hypotheekbank te Groningen 1929 met coupons en verklaringen van de Raad voor Rechtsherstel. <unitdate>1929.</unitdate></unittitle><physdesc>
-<extent>1 map</extent></physdesc></did><odd><p>N.B. Geliquideerd in opdracht van de Staat der Nederlanden in 1950-1954 vanwege de deviezen. De dan uitgegeven amortisatiebewijzen zijn in 2008 nog niet afgehandeld.</p></odd></c02><c02 level="file"><did><unitid>7</unitid><unittitle>Folders en artikelen over vermogen 1945-1965, afkoop rentezegels 1967 en loonsverhoging 1976.<unitdate>1945-1965, 1967 en 1976.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>8</unitid><unittitle>Stukken betreffende verzekeringen, (WA 1954-1972, leven 1957-1973, begraven 1949-1976). <unitdate>1949-1976.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>9</unitid><unittitle>Stukken betreffende het Wit-Gele Kruis 1955 en het Algemeen Ziekenfonds 'Ziekenzorg' 1940-1954. <unitdate>1940-1955.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>10</unitid><unittitle>	Stukken betreffende bouwvergunning schoorsteen, 1948, huurprijsuitvoerbeschikking 1948, gasprijs, z.j. <unitdate>1948 en z.j.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>11</unitid><unittitle>Correspondentie met Tsjechische filatelisten. <unitdate>(1935) 1945-1948.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>12</unitid><unittitle>Reisbescheiden. <unitdate>1956-1967.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02></c01><c01 level="series"><did><unittitle>Werk</unittitle></did><c02 level="file"><did><unitid>13</unitid><unittitle>Stukken betreffende benoeming PTT, promoties, gratificaties, cursus. <unitdate>1941-1976.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>14</unitid><unittitle>Reglementen, 1934-1967, Kortschrift, 1924. <unitdate>1924, 1934-1967.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>15</unitid><unittitle>Stukken betreffende de 	St Joseph’s Gezellenvereniging, 1937-1941, de Vereniging van en voor Burgerlijke Ambtenaren 'HORA' (Herstellings-Oord Rustbehoevende Ambtenaren), 1949-1958, de Katholieke Bond van Overheidspersoneel (KABO), 1951-1958. <unitdate>1937-1941, 1949-1958.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>16</unitid><unittitle>Stukken betreffende de financiële verantwoording van de handel in tandenborstels e.a. <unitdate>1943.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>17</unitid><unittitle>	Ontwerp briefhoofd en adreslijst. <unitdate>Z.j.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>18</unitid><unittitle>Correspondentie met leveranciers. <unitdate>1942-1946.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>19</unitid><unittitle>	Nota’s en kwitanties van leveranciers. <unitdate>1943.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>20</unitid><unittitle>	Correspondentie met afnemers. <unitdate>1942-1943.</unitdate></unittitle><physdesc>
-<extent>1 omslag</extent></physdesc></did></c02><c02 level="file"><did><unitid>21</unitid><unittitle>	Ontvangstbewijzen en afschriften. <unitdate>1943.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>2</unitid><unittitle>Handleiding met voorbeelden. Girokantoor der Gemeente Amsterdam. 20e druk. 1941 en Giroboekje verstrekt door het Girokantoor der Gemeente Amsterdam. 1943-1952. <unitdate>1941, 1943-1952.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>3</unitid><unittitle>Stukken betreffende de inkomstenbelasting 1951-1957 en de personele belasting 1955-1956. <unitdate>1951-1957.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>4</unitid><unittitle>Stukken betreffende de betaling van Schoolgeld. <unitdate>1963-1964.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>5</unitid><unittitle>Register betreffende lopende verzekeringen 1949-1983 en vaste betalingen 1957-1970. <unitdate>1949-1983.</unitdate></unittitle><physdesc>
+<extent>1 deel</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>6</unitid><unittitle>6	12x fl.1.000 en 8x fl.250 aandelen Nieuwe Nederlandsch-Amerikaansche Hypotheekbank te Groningen 1929 met coupons en verklaringen van de Raad voor Rechtsherstel. <unitdate>1929.</unitdate></unittitle><physdesc>
+<extent>1 map</extent></physdesc></did><odd><p>N.B. Geliquideerd in opdracht van de Staat der Nederlanden in 1950-1954 vanwege de deviezen. De dan uitgegeven amortisatiebewijzen zijn in 2008 nog niet afgehandeld.</p></odd></c02>
+<c02 level="file"><did><unitid>7</unitid><unittitle>Folders en artikelen over vermogen 1945-1965, afkoop rentezegels 1967 en loonsverhoging 1976.<unitdate>1945-1965, 1967 en 1976.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>8</unitid><unittitle>Stukken betreffende verzekeringen, (WA 1954-1972, leven 1957-1973, begraven 1949-1976). <unitdate>1949-1976.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>9</unitid><unittitle>Stukken betreffende het Wit-Gele Kruis 1955 en het Algemeen Ziekenfonds 'Ziekenzorg' 1940-1954. <unitdate>1940-1955.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>10</unitid><unittitle>	Stukken betreffende bouwvergunning schoorsteen, 1948, huurprijsuitvoerbeschikking 1948, gasprijs, z.j. <unitdate>1948 en z.j.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>11</unitid><unittitle>Correspondentie met Tsjechische filatelisten. <unitdate>(1935) 1945-1948.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>12</unitid><unittitle>Reisbescheiden. <unitdate>1956-1967.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02></c01>
+<c01 level="series"><did><unittitle>Werk</unittitle></did>
+<c02 level="file"><did><unitid>13</unitid><unittitle>Stukken betreffende benoeming PTT, promoties, gratificaties, cursus. <unitdate>1941-1976.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>14</unitid><unittitle>Reglementen, 1934-1967, Kortschrift, 1924. <unitdate>1924, 1934-1967.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>15</unitid><unittitle>Stukken betreffende de 	St Joseph’s Gezellenvereniging, 1937-1941, de Vereniging van en voor Burgerlijke Ambtenaren 'HORA' (Herstellings-Oord Rustbehoevende Ambtenaren), 1949-1958, de Katholieke Bond van Overheidspersoneel (KABO), 1951-1958. <unitdate>1937-1941, 1949-1958.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>16</unitid><unittitle>Stukken betreffende de financiële verantwoording van de handel in tandenborstels e.a. <unitdate>1943.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>17</unitid><unittitle>	Ontwerp briefhoofd en adreslijst. <unitdate>Z.j.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>18</unitid><unittitle>Correspondentie met leveranciers. <unitdate>1942-1946.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>19</unitid><unittitle>	Nota’s en kwitanties van leveranciers. <unitdate>1943.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>20</unitid><unittitle>	Correspondentie met afnemers. <unitdate>1942-1943.</unitdate></unittitle><physdesc>
+<extent>1 omslag</extent></physdesc></did></c02>
+<c02 level="file"><did><unitid>21</unitid><unittitle>	Ontvangstbewijzen en afschriften. <unitdate>1943.</unitdate></unittitle><physdesc>
 <extent>1 omslag</extent></physdesc></did></c02></c01></dsc> </archdesc> </ead> 

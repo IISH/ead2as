@@ -15,7 +15,8 @@
     <unitdate type="inclusive" label="Period" encodinganalog="245$f" normal="1955/1965">1955-1965</unitdate>
     
     <unitid repositorycode="NL-AmsISG" label="Collection ID" countrycode="NL" encodinganalog="852$j">ARCH04803</unitid>
-    <origination label="Creator"><corpname encodinganalog="110$a">All-India Trade Union Congress</corpname></origination>
+    <origination label="Creator">
+<corpname encodinganalog="110$a">All-India Trade Union Congress</corpname></origination>
     
     <physdesc label="Physical Description"><extent unit="bytes" label="Extent" encodinganalog="300$a">46.7 GB</extent></physdesc>
     <langmaterial label="Language of Material" encodinganalog="546$a"><language encodinganalog="041$a" langcode="eng">English</language>,
@@ -33,12 +34,15 @@
       <head>Content</head> <p>This part of the archives contains correspondence, minutes, reports, resolutions and other documents related to the Congresses, General Council, Working Committee and the Secretariat of the AITUC from the period 1955-1965.</p>
       </scopecontent>  
     <processinfo encodinganalog="583$a"> <head>Processing Information</head> <p>List made by the ICAS:MP project team, 2018-2020, based on lists made within the Archives of Indian Labour project (1998 - onwards).</p>
-      </processinfo><controlaccess><head>Subjects</head><controlaccess> 
+      </processinfo>
+<controlaccess><head>Subjects</head>
+<controlaccess> 
         <head>Geographic Names</head><geogname encodinganalog="044$c" role="country of origin" normal="IN">India</geogname></controlaccess>
       <controlaccess><head>Persons</head>
         <persname encodinganalog="600$a" role="subject">Dange, S.A.</persname><persname encodinganalog="600$a" role="subject">Gupta, Indrajit</persname><persname encodinganalog="600$a" role="subject">Gupta, Bhpesh</persname><persname encodinganalog="600$a" role="subject">Shrivastava, K.G.</persname></controlaccess>
       <controlaccess><head>Organizations</head>
-        <corpname encodinganalog="610$a" role="subject">Communist Party of India</corpname><corpname encodinganalog="610$a" role="subject">World Federation of Trade Unions (WFTU)</corpname></controlaccess>
+        <corpname encodinganalog="610$a" role="subject">Communist Party of India</corpname>
+<corpname encodinganalog="610$a" role="subject">World Federation of Trade Unions (WFTU)</corpname></controlaccess>
       <controlaccess><head>Themes</head> <subject encodinganalog="650$a">Syndicalism/Trade unions</subject>
         </controlaccess>
       <controlaccess><head>Material Type</head> <genreform encodinganalog="655$a">Archival material</genreform>
@@ -52,7 +56,8 @@
       <head>Location of Originals</head> <p>Originals held in the V.V. Giri National Labour Institute (VVGNLI, Noida, India)</p>
       </originalsloc> <altformavail encodinganalog="530$a"> <head>Alternative Form</head> <p>Documents digitized as part of the digitisation project "The Archives of Indian Labour", 1998-2020</p></altformavail></descgrp>
     <dsc type="combined">
-<head>Inventory</head><c01 level="series"><did><unittitle>AITUC Congress, 1957-1961</unittitle></did>
+<head>Inventory</head>
+<c01 level="series"><did><unittitle>AITUC Congress, 1957-1961</unittitle></did>
 <c02 level="subseries"><did><unittitle>AITUC session (Prep.)</unittitle>
 </did>
 <scopecontent>
