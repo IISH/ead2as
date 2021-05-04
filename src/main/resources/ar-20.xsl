@@ -15,9 +15,9 @@
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
-        <unitdate calendar="gregorian" era="ce">
+        <ead:unitdate calendar="gregorian" era="ce">
             <xsl:value-of select="$unitdate"/>
-        </unitdate>
+        </ead:unitdate>
     </xsl:template>
 
     <!-- verwijder het unitdate element, maar houd de tekst erin. -->
