@@ -43,10 +43,20 @@ cd ..
 
 # remove empty tags (2)
 SOURCE=temp4
-TARGET=out2
+TARGET=temp5
 mkdir -p $TARGET ; cd $SOURCE || exit
 for FILE in *.xml; do
    sed -E 's/<([a-zA-Z]+:?[a-zA-Z]*) *><\/\1 *>//g' "$FILE" > "../$TARGET/$FILE"
+done
+cd ..
+
+
+# verwijder achtergebleven namespace prefix
+SOURCE=temp5
+TARGET=out2
+mkdir -p $TARGET ; cd $SOURCE || exit
+for FILE in *.xml; do
+   sed -E 's~(</?)ead:~\1~g' "$FILE" > "../$TARGET/$FILE"
 done
 cd ..
 
