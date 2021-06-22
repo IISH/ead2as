@@ -8,6 +8,7 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class EAD2ArchivesSpace {
 
@@ -25,10 +26,10 @@ public class EAD2ArchivesSpace {
             e.printStackTrace();
         }
 
-//        String[] _transformers = {"/1.identity.xsl"};
+        String[] _transformers = {"/1.identity.xsl"};
 //        String[] _transformers = {"/ar-2.xsl", "/ar-12.xsl", "/ar-20.xsl"}; // lwo
 //        String[] _transformers = { "/ar-3.xsl", "/ar-11.xsl", "/ar-21.xsl", "/ar-24.xsl", "/ar-22-temove-empty-nodes.xsl" }; // gcu
-        String[] _transformers = { "/ar-29.xsl" }; // gcu
+//        String[] _transformers = {"/ar-29.xsl"}; // gcu
 
         //
         for (String _transformer : _transformers) {
@@ -69,15 +70,38 @@ public class EAD2ArchivesSpace {
 
         for (File source_file : source_files) {
             final FileInputStream source = new FileInputStream(source_file);
+            final FilterInputStream fis = new BufferedInputStream(source);
 
             final int length = (int) source_file.length();
-            byte[] record = new byte[length];
+            byte[] tmp = new byte[length];
 
-            final int result = source.read(record, 0, length);
+            // Filter herhaling in tab, linefeet en carriage return combinaties.
+            int b, index = -1;
+            boolean repeat = false;
+            while ((b = fis.read()) != -1) {
+                switch (b) {
+                    case 9: // tab
+                    case 10: // linefeed
+                    case 13: // carriage return
+                    case 32: //space
+                        if (repeat) {
+                            // skip
+                        } else {
+                            tmp[++index] = 32; // space
+                            repeat = true;
+                        }
+                        break;
+                    default:
+                        repeat = false;
+                        tmp[++index] = (byte) b;
+                }
+            }
 
+            final int l = index + 1;
             final String name = source_file.getName();
+            byte[] record = Arrays.copyOfRange(tmp, 0, l);
 
-            System.out.println(source_file.getAbsolutePath() + " " + result + " " + name);
+            System.out.println(source_file.getAbsolutePath() + " " + l + " " + name);
             for (Transformer transformer : transformers) {
                 record = convertRecord(transformer, record);
             }
