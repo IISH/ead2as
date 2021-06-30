@@ -42,4 +42,8 @@ public class Utils {
 
         return ret;
     }
+
+    public static String normalDate(String text) {
+        return text.replaceAll("-", "");
+    }
 }
