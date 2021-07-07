@@ -1,5 +1,6 @@
 package org;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
 import org.xml.sax.SAXException;
 
 import javax.xml.transform.*;
@@ -26,10 +27,24 @@ public class EAD2ArchivesSpace {
             e.printStackTrace();
         }
 
-        String[] _transformers = {"/ar-1.xsl"};
-//        String[] _transformers = {"/ar-2.xsl", "/ar-12.xsl", "/ar-20.xsl"}; // lwo
-//        String[] _transformers = { "/ar-3.xsl", "/ar-11.xsl", "/ar-21.xsl", "/ar-24.xsl", "/ar-22-temove-empty-nodes.xsl" }; // gcu
-//        String[] _transformers = {"/ar-29.xsl"}; // gcu
+        final String[] _transformers = {
+                "/ar-1.xsl",
+                "/ar-2.xsl",
+                "/ar-3.xsl",
+                "/ar-4.xsl",
+                "/ar-8.xsl",
+                "/ar-11.xsl",
+                "/ar-12.xsl",
+                "/ar-13.xsl",
+                "/ar-19.xsl",
+                "/ar-20.xsl",
+                "/ar-21.xsl",
+                "/ar-22.xsl",
+                "/ar-24.xsl",
+                "/ar-27.xsl",
+                "/ar-29.xsl",
+                "/ar-30.xsl"
+        };
 
         //
         for (String _transformer : _transformers) {
@@ -54,7 +69,7 @@ public class EAD2ArchivesSpace {
 
     }
 
-    private void run(String source_folder, String target_folder) throws IOException, TransformerException {
+    private void run(String source_folder, boolean validateIt, String target_folder) throws IOException, TransformerException {
 
         final File[] source_files = new File(source_folder).listFiles();
         if (source_files == null) {
@@ -73,35 +88,10 @@ public class EAD2ArchivesSpace {
             final FilterInputStream fis = new BufferedInputStream(source);
 
             final int length = (int) source_file.length();
-            byte[] tmp = new byte[length];
-
-            // Filter herhaling in tab, linefeet en carriage return combinaties.
-            int b, index = -1;
-            boolean repeat = false;
-            while ((b = fis.read()) != -1) {
-                switch (b) {
-                    case 9: // tab
-                    case 10: // linefeed
-                    case 13: // carriage return
-                    case 32: //space
-                        if (repeat) {
-                            // skip
-                        } else {
-                            tmp[++index] = 32; // space
-                            repeat = true;
-                        }
-                        break;
-                    default:
-                        repeat = false;
-                        tmp[++index] = (byte) b;
-                }
-            }
-
-            final int l = index + 1;
+            byte[] record = new byte[length];
+            final int result = source.read(record, 0, length);
             final String name = source_file.getName();
-            byte[] record = Arrays.copyOfRange(tmp, 0, l);
 
-            System.out.println(source_file.getAbsolutePath() + " " + l + " " + name);
             for (Transformer transformer : transformers) {
                 record = convertRecord(transformer, record);
             }
@@ -110,11 +100,15 @@ public class EAD2ArchivesSpace {
             final FileOutputStream fos = new FileOutputStream(target);
             fos.write(record);
 
-            final String msg = validate.validate(target);
-            if (msg != null) {
-                System.out.println("Invalid EAD xml document: " + target.getAbsolutePath());
-                System.out.println(msg);
+            if (validateIt) {
+                final String msg = validate.validate(target);
+                if (msg != null) {
+                    System.out.println("Invalid EAD xml document: " + target.getAbsolutePath());
+                    System.out.println(msg);
+                }
             }
+
+            System.out.println("source:" + source_file.getAbsolutePath() + " validate:" + validateIt + " length:" + length + " target:" + target.getAbsolutePath());
         }
     }
 
@@ -135,9 +129,10 @@ public class EAD2ArchivesSpace {
 
         final String in = args[0];
         final String out = args[1];
+        final boolean validateIt = args.length != 3 || Boolean.getBoolean(args[2]);
 
         System.out.println("In " + in);
         System.out.println("Out " + out);
-        new EAD2ArchivesSpace().run(in, out);
+        new EAD2ArchivesSpace().run(in, validateIt, out);
     }
 }

@@ -49,7 +49,6 @@
 
         <!-- AR-25 Issue 52: rapport met note/unitdate gevallen -->
         <xsl:variable name="note_unitdate" select="count(//ead:note[ead:unitdate])"/>
-
         <!-- AR-26 - Issue 58a: rapport met genreform, language en origination -->
         <xsl:variable name="physdesc_genreform" select="count(//ead:physdesc[ead:genreform])"/>
         <xsl:variable name="physdesc_language" select="count(//ead:dsc[ead:language or */ead:language or */*/ead:language or */*/*/ead:language or */*/*/*/ead:language or */*/*/*/*/ead:language or */*/*/*/*/*/ead:language or */*/*/*/*/*/*/ead:language or */*/*/*/*/*/*/*/ead:language or */*/*/*/*/*/*/*/*/ead:language or */*/*/*/*/*/*/*/*/*/ead:language or */*/*/*/*/*/*/*/*/*/*/ead:language or */*/*/*/*/*/*/*/*/*/*/*/ead:language])"/>
@@ -69,8 +68,12 @@
             </xsl:choose>
         </xsl:variable>
 
+<!--        https://jira.socialhistoryservices.org/browse/AR-35-->
+        <xsl:variable name="extent_ca"
+                      select="count(//ead:did/ead:physdesc/ead:extent[contains(text(), 'c.') or contains(text(), 'ca.') or contains(text(), 'circa')])"/>
+
         <xsl:value-of
-                select="concat($cxx_unittitle, $k, $lb_in_unittitle, $k, $physdesc_extent_item_encodinganalog_300a,$k, $physdesc_extent_bytes_encodinganalog_300a, $k, $cxx_geen_atribuut_level, $k, $physdesc_extent_kommagetal, $k, $odd_in_odd, $k, $langusage_language, $k, $dsc_head_note, $k, $dsc_note_type, $k, $dsc_odd_type, $k, $note_unitdate, $k, $physdesc_genreform, $k, $physdesc_language, $k, $physdesc_origination, $k, $bytes_meter_item)"/>
+                select="concat($cxx_unittitle, $k, $lb_in_unittitle, $k, $physdesc_extent_item_encodinganalog_300a,$k, $physdesc_extent_bytes_encodinganalog_300a, $k, $cxx_geen_atribuut_level, $k, $physdesc_extent_kommagetal, $k, $odd_in_odd, $k, $langusage_language, $k, $dsc_head_note, $k, $dsc_note_type, $k, $dsc_odd_type, $k, $note_unitdate, $k, $physdesc_genreform, $k, $physdesc_language, $k, $physdesc_origination, $k, $bytes_meter_item, $k, $extent_ca)"/>
 
     </xsl:template>
 

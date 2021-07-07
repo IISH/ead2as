@@ -64,14 +64,14 @@ public class Rapport {
             final int total = source.read(record, 0, length);
 
             final String name = source_file.getName().replace(".xml", ".txt");
+            final File target = new File(targetFolder, name);
 
-            System.out.println(source_file.getAbsolutePath() + " " + total + " " + name);
+            System.out.println(source_file.getAbsolutePath() + " " + total + " " + target.getAbsolutePath());
             for (Transformer transformer : transformers) {
                 record = convertRecord(transformer, record);
             }
 
-            File target = new File(targetFolder, name);
-            FileOutputStream fos = new FileOutputStream(target);
+            final FileOutputStream fos = new FileOutputStream(target);
             fos.write(record);
         }
     }

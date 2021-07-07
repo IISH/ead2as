@@ -1,7 +1,5 @@
 .idea
 *.iml
 pom.xml
-in/
-out/
-FINAL/
+example/
 target/
