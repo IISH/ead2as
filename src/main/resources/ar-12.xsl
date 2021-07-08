@@ -9,6 +9,6 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:acqinfo"/>
+    <xsl:template match="ead:acqinfo[@audience='internal']"/>
 
 </xsl:stylesheet>

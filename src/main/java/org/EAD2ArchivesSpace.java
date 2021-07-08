@@ -28,6 +28,7 @@ public class EAD2ArchivesSpace {
         }
 
         final String[] _transformers = {
+//                "/identity.xsl",
                 "/ar-1.xsl",
                 "/ar-2.xsl",
                 "/ar-3.xsl",
@@ -35,18 +36,22 @@ public class EAD2ArchivesSpace {
                 "/ar-8.xsl",
                 "/ar-11.xsl",
                 "/ar-12.xsl",
+                "/ar-12-descgrp.xsl", // deze is nodig, want ar-12.xsl maakt anders invalide ead met lege descgrp elementen
                 "/ar-13.xsl",
                 "/ar-19.xsl",
                 "/ar-20.xsl",
                 "/ar-21.xsl",
-                "/ar-22.xsl",
+                "/ar-22.xsl", // Deze is lastig, want die maakt invalide ead
+                "/ar-22.xsl", // Herhaal, omdat een verwijdert leeg element de ouder ook leeg kan maken
+                "/ar-22.xsl", // "
+                "/ar-22.xsl", // "
+                "/ar-22.xsl", // "
                 "/ar-24.xsl",
                 "/ar-27.xsl",
                 "/ar-29.xsl",
                 "/ar-30.xsl"
         };
 
-        //
         for (String _transformer : _transformers) {
 
             final URL resource = this.getClass().getResource(_transformer);
@@ -69,7 +74,7 @@ public class EAD2ArchivesSpace {
 
     }
 
-    private void run(String source_folder, boolean validateIt, String target_folder) throws IOException, TransformerException {
+    private void run(String source_folder, String target_folder, boolean validateIt) throws IOException, TransformerException {
 
         final File[] source_files = new File(source_folder).listFiles();
         if (source_files == null) {
@@ -85,11 +90,10 @@ public class EAD2ArchivesSpace {
 
         for (File source_file : source_files) {
             final FileInputStream source = new FileInputStream(source_file);
-            final FilterInputStream fis = new BufferedInputStream(source);
 
             final int length = (int) source_file.length();
             byte[] record = new byte[length];
-            final int result = source.read(record, 0, length);
+            source.read(record, 0, length);
             final String name = source_file.getName();
 
             for (Transformer transformer : transformers) {
@@ -102,13 +106,15 @@ public class EAD2ArchivesSpace {
 
             if (validateIt) {
                 final String msg = validate.validate(target);
-                if (msg != null) {
+                if (msg == null) {
+                    // ok
+                } else {
                     System.out.println("Invalid EAD xml document: " + target.getAbsolutePath());
                     System.out.println(msg);
                 }
             }
 
-            System.out.println("source:" + source_file.getAbsolutePath() + " validate:" + validateIt + " length:" + length + " target:" + target.getAbsolutePath());
+           //System.out.println("source:" + source_file.getAbsolutePath() + " validate:" + validateIt + " length:" + length + " target:" + target.getAbsolutePath());
         }
     }
 
@@ -129,10 +135,10 @@ public class EAD2ArchivesSpace {
 
         final String in = args[0];
         final String out = args[1];
-        final boolean validateIt = args.length != 3 || Boolean.getBoolean(args[2]);
+        final boolean validateIt = args.length != 3 || Boolean.parseBoolean(args[2]);
 
         System.out.println("In " + in);
         System.out.println("Out " + out);
-        new EAD2ArchivesSpace().run(in, validateIt, out);
+        new EAD2ArchivesSpace().run(in, out, validateIt);
     }
 }

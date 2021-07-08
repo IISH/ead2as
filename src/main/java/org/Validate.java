@@ -36,7 +36,7 @@ public class Validate {
             validator.validate(source);
             return null;
         } catch (SAXException ex) {
-            return ex.getMessage();
+            return ex.toString();
         } catch (IOException ex) {
             return "Could not read file " + file;
         }

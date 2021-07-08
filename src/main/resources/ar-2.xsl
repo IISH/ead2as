@@ -12,7 +12,7 @@
     <xsl:template match="ead:langusage/ead:language/@*">
         <xsl:attribute name="scriptcode">Latn</xsl:attribute>
         <xsl:copy>
-            <xsl:apply-templates select="@*"/>
+            <xsl:apply-templates select="."/>
         </xsl:copy>
     </xsl:template>
 

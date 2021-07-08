@@ -3,18 +3,21 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 exclude-result-prefixes="ead xlink">
 
-    <xsl:template match="ead:ead">
-        <ead:ead>
-            <xsl:apply-templates select="node() | @*"/>
-        </ead:ead>
-    </xsl:template>
+    <xsl:output method="text"/>
 
     <xsl:template match="node() | @*">
             <xsl:apply-templates select="node() | @*"/>
     </xsl:template>
 
-    <xsl:template match="ead:acqinfo">
-        <xsl:copy-of select="."/>
+    <xsl:template match="ead:acqinfo[@audience='internal']">
+        <xsl:apply-templates select="node() | @*" mode="genest"/>
+    </xsl:template>
+
+
+    <xsl:template match="node() | @*" mode="genest">
+            <xsl:value-of select="text()"/><xsl:text>
+</xsl:text>
+        <xsl:apply-templates select="node() | @*" mode="genest"/>
     </xsl:template>
 
 </xsl:stylesheet>
