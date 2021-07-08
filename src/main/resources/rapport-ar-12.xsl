@@ -3,6 +3,8 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 exclude-result-prefixes="ead xlink">
 
+<!--   verwijder linebreaks: for f in *.txt; do   while read -r line; do [ -n "$line" ] && echo "$line" >> "out/${f}"; done < "$f"; done-->
+
     <xsl:output method="text"/>
 
     <xsl:template match="node() | @*">
