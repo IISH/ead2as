@@ -10,7 +10,11 @@
     </xsl:template>
 
     <xsl:template match="ead:scopecontent/ead:note">
-        <ead:p><xsl:value-of select="text()"/></ead:p>
+        <xsl:for-each select="node()">
+            <xsl:copy>
+                <xsl:apply-templates select="node() | @*"/>
+            </xsl:copy>
+        </xsl:for-each>
     </xsl:template>
 
 </xsl:stylesheet>

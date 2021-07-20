@@ -12,7 +12,17 @@
     </xsl:template>
 
     <xsl:template match="ead:unittitle/ead:unitdate">
-        <xsl:value-of select="text()"/>
+        <xsl:variable name="count" select="count(../*)"/>
+        <xsl:choose>
+            <xsl:when test="$count=1">
+                <xsl:value-of select="text()"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy>
+                    <xsl:apply-templates select="node() | @*"/>
+                </xsl:copy>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
 </xsl:stylesheet>

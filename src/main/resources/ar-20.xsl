@@ -10,19 +10,31 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:unittitle[ead:unitdate]">
+    <xsl:template match="ead:unittitle[count(ead:unitdate)>1]">
         <xsl:variable name="unitdate" select="ext:unitdate(ead:unitdate/text())"/>
-        <xsl:copy>
-            <xsl:apply-templates select="node() | @*"/>
-        </xsl:copy>
-        <ead:unitdate calendar="gregorian" era="ce">
-            <xsl:value-of select="$unitdate"/>
-        </ead:unitdate>
+        <xsl:choose>
+            <xsl:when test="$unitdate">
+                <xsl:copy>
+                    <xsl:apply-templates select="node()| @*" mode="no_unitdate"/>
+                    <ead:unitdate calendar="gregorian" era="ce">
+                        <xsl:value-of select="$unitdate"/>
+                    </ead:unitdate>
+                </xsl:copy>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:copy>
+                    <xsl:apply-templates select="node() | @*"/>
+                </xsl:copy>
+            </xsl:otherwise>
+        </xsl:choose>
     </xsl:template>
 
-    <!-- verwijder het unitdate element, maar hou de tekst erin. -->
-    <xsl:template match="ead:unittitle/ead:unitdate">
-        <xsl:value-of select="text()"/>
+    <xsl:template match="node() | @*" mode="no_unitdate">
+        <xsl:copy>
+            <xsl:apply-templates select="node() | @*" mode="no_unitdate"/>
+        </xsl:copy>
     </xsl:template>
+
+    <xsl:template match="ead:unitdate" mode="no_unitdate"/>
 
 </xsl:stylesheet>
