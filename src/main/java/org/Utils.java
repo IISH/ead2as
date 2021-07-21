@@ -53,9 +53,12 @@ public class Utils {
 
         int van = Integer.MAX_VALUE, tot = Integer.MIN_VALUE;
 
+        final StringBuilder sb = new StringBuilder();
+
         for ( int i = 0 ; i < nodelist.getLength(); i++) {
 
             final String text = nodelist.item(i).getNodeValue();
+            sb.append(text).append(" | ");
 
             final String str = text.replaceAll("[^\\d]", " ")
                     .trim()
@@ -74,7 +77,7 @@ public class Utils {
 
         final String ret;
         if (van == Integer.MAX_VALUE && tot == Integer.MIN_VALUE) {
-            System.out.println("No matches");
+            System.out.println("No matches with " + sb);
             return null;
         } else if (van == Integer.MAX_VALUE) {
             ret = String.valueOf(tot);

@@ -51,12 +51,23 @@ done
 cd ..
 
 
-# verwijder achtergebleven namespace prefix
+# verwijder overbodige namespace
 SOURCE=temp5
+TARGET=temp6
+mkdir -p $TARGET ; cd $SOURCE || exit
+for FILE in *.xml; do
+   sed -E 's/<([a-zA-Z]+:?[a-zA-Z]*) *><\/\1 *>//g' "$FILE" > "../$TARGET/$FILE"
+done
+cd ..
+
+xmlns:ead="urn:isbn:1-931666-22-9"
+
+# verwijder achtergebleven namespace prefix
+SOURCE=temp6
 TARGET=out2
 mkdir -p $TARGET ; cd $SOURCE || exit
 for FILE in *.xml; do
-   sed -E 's~(</?)ead:~\1~g' "$FILE" > "../$TARGET/$FILE"
+   sed -E 's/ xmlns:ead="urn:isbn:1-931666-22-9"//g' "$FILE" > "../$TARGET/$FILE"
 done
 cd ..
 

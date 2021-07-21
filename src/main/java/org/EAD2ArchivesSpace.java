@@ -31,34 +31,35 @@ public class EAD2ArchivesSpace {
 //                "/identity.xsl"
 //        };
 
-        final String[] _transformers = {
-                "/rapport-ar-12.xsl"
-        };
-
 //        final String[] _transformers = {
-//                "/ar-1.xsl",
-//                "/ar-2.xsl",
-//                "/ar-3.xsl",
-//                "/ar-4.xsl",
-//                "/ar-8.xsl",
-//                "/ar-11.xsl",
-//                "/ar-12.xsl",
-//                "/ar-12-descgrp.xsl", // deze is nodig, want ar-12.xsl maakt anders invalide ead met lege descgrp elementen
-//                "/ar-13.xsl",
-//                "/ar-19.xsl",
-//                "/ar-20.xsl",
-//                "/ar-21.xsl",
-//                "/ar-22.xsl", // Deze is lastig, want die maakt invalide ead
-//                "/ar-22.xsl", // Herhaal, omdat een verwijdert leeg element de ouder ook leeg kan maken
-//                "/ar-22.xsl", // "
-//                "/ar-22.xsl", // "
-//                "/ar-22.xsl", // "
-//                "/ar-24.xsl",
-//                "/ar-27.xsl",
-//                "/ar-29.xsl",
-//                "/ar-30.xsl"
-//                "/ar-38.xsl"
+//                "/rapport-ar-12.xsl"
 //        };
+
+        final String[] _transformers = {
+                "/ar-1.xsl",
+                "/ar-2.xsl",
+                "/ar-3.xsl",
+                "/ar-4.xsl",
+                "/ar-8.xsl",
+                "/ar-11.xsl",
+                "/ar-12.xsl",
+                "/ar-12-descgrp.xsl", // deze is nodig, want ar-12.xsl maakt anders invalide ead met lege descgrp elementen
+                "/ar-13.xsl",
+                "/ar-19.xsl",
+                "/ar-20.xsl",
+                "/ar-21.xsl",
+                "/ar-22.xsl", // Deze is lastig, want die maakt invalide ead
+                "/ar-22.xsl", // Herhaal, omdat een verwijdert leeg element de ouder ook leeg kan maken
+                "/ar-22.xsl", // "
+                "/ar-22.xsl", // "
+                "/ar-22.xsl", // "
+                "/ar-24.xsl",
+                "/ar-27.xsl",
+                "/ar-29.xsl",
+                "/ar-30.xsl",
+                "/ar-37.xsl",
+                "/ar-38.xsl"
+        };
 
         for (String _transformer : _transformers) {
 
@@ -84,7 +85,7 @@ public class EAD2ArchivesSpace {
 
     private void run(String source_folder, String target_folder, boolean validateIt) throws IOException, TransformerException {
 
-        final File[] source_files = new File(source_folder).listFiles();
+        final File[] source_files = new File(source_folder).listFiles((dir, name) -> name.toLowerCase().endsWith(".xml"));
         if (source_files == null) {
             System.out.print("The folder has no files: " + source_folder);
             System.exit(-1);
@@ -122,7 +123,7 @@ public class EAD2ArchivesSpace {
                 }
             }
 
-            //System.out.println("source:" + source_file.getAbsolutePath() + " validate:" + validateIt + " length:" + length + " target:" + target.getAbsolutePath());
+            System.out.println("source:" + source_file.getAbsolutePath() + " validate:" + validateIt + " length:" + length + " target:" + target.getAbsolutePath());
         }
     }
 
