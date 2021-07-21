@@ -60,14 +60,12 @@ for FILE in *.xml; do
 done
 cd ..
 
-xmlns:ead="urn:isbn:1-931666-22-9"
-
-# verwijder achtergebleven namespace prefix
+# verwijder achtergebleven namespace prefix en declaratie
 SOURCE=temp6
 TARGET=out2
 mkdir -p $TARGET ; cd $SOURCE || exit
 for FILE in *.xml; do
-   sed -E 's/ xmlns:ead="urn:isbn:1-931666-22-9"//g' "$FILE" > "../$TARGET/$FILE"
+   sed -E 's/ xmlns:ead="urn:isbn:1-931666-22-9"|ead://g' "$FILE" > "../$TARGET/$FILE"
 done
 cd ..
 
