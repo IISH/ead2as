@@ -14,7 +14,9 @@
             <xsl:when
                     test="local-name(following-sibling::node()) = 'lb'"/>
             <xsl:otherwise>
-                <xsl:copy/>
+                <xsl:copy>
+                    <xsl:apply-templates select="node() | @*"/>
+                </xsl:copy>
             </xsl:otherwise>
         </xsl:choose>
 

@@ -31,12 +31,12 @@ done
 cd ..
 
 
-# add dummy data to protect removing empty ead:lb
+# add dummy data to protect removing empty lb
 SOURCE=temp3
 cd $SOURCE || exit
 for FILE in *.xml; do
-   sed -i 's/<ead:lb\/>/<ead:lb>_DUMMY_DATA_<\/ead:lb>/g' "$FILE"
-   sed -i 's/<ead:lb><\/ead:lb>/<ead:lb>_DUMMY_DATA_<\/ead:lb>/g' "$FILE"
+   sed -i 's/<lb\/>/<lb>_DUMMY_DATA_<\/lb>/g' "$FILE"
+   sed -i 's/<lb><\/lb>/<lb>_DUMMY_DATA_<\/lb>/g' "$FILE"
 done
 cd ..
 
@@ -61,11 +61,11 @@ done
 cd ..
 
 
-# remove dummy data from ead:lb
+# remove dummy data from lb
 SOURCE=temp5
 cd $SOURCE || exit
 for FILE in *.xml; do
-   sed -i 's/<ead:lb>_DUMMY_DATA_<\/ead:lb>/<ead:lb\/>/g' "$FILE"
+   sed -i 's/<lb>_DUMMY_DATA_<\/lb>/<lb\/>/g' "$FILE"
 done
 cd ..
 
