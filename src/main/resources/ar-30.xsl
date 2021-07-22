@@ -9,7 +9,13 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:physdesc">
+    <xsl:template match="ead:physdesc[not(ead:extent)]">
+        <xsl:copy>
+            <xsl:apply-templates select="node() | @*"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="ead:physdesc[ead:extent]">
 
         <xsl:variable name="is_file_bytes_groep" select="count(ead:extent[@unit='bytes' or @unit='file'])"/>
         <xsl:variable name="is_not_file_bytes_groep" select="count(ead:extent[not(@unit='bytes' or @unit='file')])"/>

@@ -9,7 +9,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:physdesc/ead:extent">
+    <xsl:template match="ead:dsc//ead:did/ead:physdesc/ead:extent">
         <xsl:value-of select="text()"/>
     </xsl:template>
 

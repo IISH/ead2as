@@ -4,9 +4,6 @@
                 xmlns:ext="java:org.Utils"
                 exclude-result-prefixes="ead xlink ext">
 
-    <xsl:variable name="lowercase" select="'abcdefghijklmnopqrstuvwxyz'"/>
-    <xsl:variable name="uppercase" select="'ABCDEFGHIJKLMNOPQRSTUVWXYZ'"/>
-
     <xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>

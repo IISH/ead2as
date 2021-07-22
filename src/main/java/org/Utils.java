@@ -103,7 +103,7 @@ public class Utils {
         for (String key : keys) {
             final String value = map.get(key);
             if ( value == null ) {
-                sb.append(key);
+                sb.append(_text);
             } else {
                 sb.append(value);
             }
