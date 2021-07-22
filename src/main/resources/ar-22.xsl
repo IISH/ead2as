@@ -9,5 +9,5 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="*[not(@*|*|comment()|processing-instruction()) and normalize-space()='']"/>
+    <xsl:template match="*[not(@*|*|comment()|processing-instruction()) and normalize-space()='' and not(local-name(.)='lb')]"/>
 </xsl:stylesheet>
