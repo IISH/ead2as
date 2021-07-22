@@ -11,7 +11,6 @@ done
 cd ..
 
 
-
 # remove space(s) before ending tags, example space </tag>
 SOURCE=temp1
 TARGET=temp2
@@ -30,6 +29,17 @@ for FILE in *.xml; do
    sed -E 's/(>) {1,}([a-zA-Z0-9])/\1\2/g' "$FILE" > "../$TARGET/$FILE"
 done
 cd ..
+
+
+# add dummy data to protect removing empty ead:lb
+SOURCE=temp3
+cd $SOURCE || exit
+for FILE in *.xml; do
+   sed -i 's/<ead:lb\/>/<ead:lb>_DUMMY_DATA_<\/ead:lb>/g' "$FILE"
+   sed -i 's/<ead:lb><\/ead:lb>/<ead:lb>_DUMMY_DATA_<\/ead:lb>/g' "$FILE"
+done
+cd ..
+
 
 # remove empty tags (1) example <tag:sub />
 SOURCE=temp3
@@ -51,6 +61,15 @@ done
 cd ..
 
 
+# remove dummy data from ead:lb
+SOURCE=temp5
+cd $SOURCE || exit
+for FILE in *.xml; do
+   sed -i 's/<ead:lb>_DUMMY_DATA_<\/ead:lb>/<ead:lb\/>/g' "$FILE"
+done
+cd ..
+
+
 # verwijder overbodige namespace
 SOURCE=temp5
 TARGET=temp6
@@ -59,6 +78,7 @@ for FILE in *.xml; do
    sed -E 's/<([a-zA-Z]+:?[a-zA-Z]*) *><\/\1 *>//g' "$FILE" > "../$TARGET/$FILE"
 done
 cd ..
+
 
 # verwijder achtergebleven namespace prefix en declaratie
 SOURCE=temp6
