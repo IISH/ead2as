@@ -11,30 +11,19 @@ done
 cd ..
 
 
-# remove space(s) before ending tags, example space </tag>
 SOURCE=temp1
-TARGET=temp2
-mkdir -p $TARGET ; cd $SOURCE || exit
-for FILE in *.xml; do
-   sed 's/ \+<\//<\//g' "$FILE" > "../$TARGET/$FILE"
-done
-cd ..
-
-
-# remove space(s) between > and character, example > space A
-SOURCE=temp2
-TARGET=temp3
-mkdir -p $TARGET ; cd $SOURCE || exit
-for FILE in *.xml; do
-   sed -E 's/(>) {1,}([a-zA-Z0-9])/\1\2/g' "$FILE" > "../$TARGET/$FILE"
-done
-cd ..
-
-
-# add dummy data to protect removing empty lb
-SOURCE=temp3
 cd $SOURCE || exit
 for FILE in *.xml; do
+   # remove space(s) before ending tags, example [space]</tag>
+   sed -i 's/ \+<\//<\//g' "$FILE"
+
+   # remove space(s) after ending </tag> if not alphanum character
+   sed -i -E 's/(<\/[a-zA-Z0-9]{1,}>) {1,}([^a-zA-Z0-9])/\1\2/g' "$FILE"
+
+   # remove space(s) after starting <tag>, example <did>[space]
+   sed -i -E 's/(<[a-zA-Z0-9]{1,}>) {1,}/\1/g' "$FILE"
+
+   # add dummy data to protect removing empty lb
    sed -i 's/<lb\/>/<lb>_DUMMY_DATA_<\/lb>/g' "$FILE"
    sed -i 's/<lb><\/lb>/<lb>_DUMMY_DATA_<\/lb>/g' "$FILE"
 done
@@ -42,7 +31,7 @@ cd ..
 
 
 # remove empty tags (1) example <tag:sub />
-SOURCE=temp3
+SOURCE=temp1
 TARGET=temp4
 mkdir -p $TARGET ; cd $SOURCE || exit
 for FILE in *.xml; do
@@ -89,7 +78,9 @@ for FILE in *.xml; do
 done
 cd ..
 
+
 rm -rf temp?/
+
 
 # print one xml file
 #EXAMPLE=ARCH04724
