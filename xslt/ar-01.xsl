@@ -3,7 +3,7 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 exclude-result-prefixes="ead xlink">
 
-    <xsl:variable name="creation" select="ead:profiledesc/ead:creation"/>
+    <xsl:variable name="creation" select="ead:ead/ead:eadheader/ead:profiledesc/ead:creation"/>
 
     <xsl:template match="node() | @*">
         <xsl:copy>
@@ -20,14 +20,19 @@
             <ead:revisiondesc>
                 <ead:change><xsl:choose>
                     <xsl:when test="$creation/ead:date">
-                        <ead:date normal="$creation/ead:date/text()" calendar="gregorian" era="ce">
+                        <ead:date calendar="gregorian" era="ce">
+                            <xsl:attribute name="normal"><xsl:value-of select="$creation/ead:date/text()"/></xsl:attribute>
                             <xsl:value-of select="$creation/ead:date"/>
                         </ead:date>
                     </xsl:when>
                     <xsl:otherwise>
                         <ead:date>Undated</ead:date>
                     </xsl:otherwise></xsl:choose>
-                    <ead:item>Finding aid created by IISH Collection Processing Department</ead:item>
+                    <xsl:choose>
+                        <xsl:when test="$creation"><ead:item><xsl:value-of select="$creation/text()"/></ead:item></xsl:when>
+                        <xsl:otherwise><ead:item>Finding aid created by IISH Collection Processing Department</ead:item></xsl:otherwise>
+                    </xsl:choose>
+
                 </ead:change>
             </ead:revisiondesc>
         </xsl:if>
@@ -41,7 +46,8 @@
             <ead:change>
                 <xsl:choose>
                     <xsl:when test="$creation/ead:date">
-                        <ead:date normal="$creation/ead:date/text()" calendar="gregorian" era="ce">
+                        <ead:date calendar="gregorian" era="ce">
+                            <xsl:attribute name="normal"><xsl:value-of select="$creation/ead:date/text()"/></xsl:attribute>
                             <xsl:value-of select="$creation/ead:date"/>
                         </ead:date>
                         <ead:item>
@@ -56,7 +62,10 @@
                     </xsl:when>
                     <xsl:otherwise>
                         <ead:date>Undated</ead:date>
-                        <ead:item>Finding aid created by IISH Collection Processing Department</ead:item>
+                        <xsl:choose>
+                            <xsl:when test="$creation"><ead:item><xsl:value-of select="$creation/text()"/></ead:item></xsl:when>
+                            <xsl:otherwise><ead:item>Finding aid created by IISH Collection Processing Department</ead:item></xsl:otherwise>
+                        </xsl:choose>
                     </xsl:otherwise>
                 </xsl:choose>
             </ead:change>
