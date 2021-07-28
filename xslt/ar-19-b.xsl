@@ -3,8 +3,6 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 exclude-result-prefixes="ead xlink">
 
-    <xsl:variable name="creation" select="ead:profiledesc/ead:creation"/>
-
     <xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>

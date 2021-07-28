@@ -119,12 +119,13 @@ public class Utils {
     public static boolean isUnitDate(org.w3c.dom.Node node) {
         final Node previousSibling = node.getPreviousSibling();
         if (previousSibling != null) {
-            final String text = previousSibling.getNodeValue().trim();
+            final String text = previousSibling.getTextContent().trim();
             if (text.endsWith(".")) {
                 final Node nextSibling = node.getNextSibling();
-                if (nextSibling == null) return true;
-                for (byte b : nextSibling.getNodeValue().trim().getBytes()) { // alleen scheidingstekens, e.a.
-                    if (b > 64) return false;
+                if (nextSibling != null) {
+                    for (byte b : nextSibling.getTextContent().trim().getBytes()) { // alleen scheidingstekens, e.a.
+                        if (b > 64) return false;
+                    }
                 }
                 return true;
             }

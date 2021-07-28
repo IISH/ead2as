@@ -20,22 +20,22 @@
             <ead:revisiondesc>
                 <ead:change>
                     <xsl:choose>
-                        <xsl:when test="$creation/ead:date">
+                        <xsl:when test="$creation/ead:date">aaaaaaaaaaaaaaaaaaaaaaa
                             <ead:date calendar="gregorian" era="ce">
                                 <xsl:value-of select="$creation/ead:date"/>
                             </ead:date>
                         </xsl:when>
-                        <xsl:otherwise>
+                        <xsl:otherwise>bbbbbbbbbbbbbbbbbbb
                             <ead:date>Undated</ead:date>
                         </xsl:otherwise>
                     </xsl:choose>
                     <xsl:choose>
                         <xsl:when test="$creation">
-                            <ead:item>
+                            <ead:item>ccccccccccccccccccccccccccccc
                                 <xsl:value-of select="$creation/text()"/>
                             </ead:item>
                         </xsl:when>
-                        <xsl:otherwise>
+                        <xsl:otherwise>dddddddddddddddddddd
                             <ead:item>Finding aid created by IISH Collection Processing Department</ead:item>
                         </xsl:otherwise>
                     </xsl:choose>
@@ -51,7 +51,7 @@
             <xsl:copy-of select="node() | @*"/>
             <ead:change>
                 <xsl:choose>
-                    <xsl:when test="$creation/ead:date">
+                    <xsl:when test="$creation/ead:date">eeeeeeeeeeeeeeeeeee
                         <ead:date calendar="gregorian" era="ce">
                             <xsl:value-of select="$creation/ead:date"/>
                         </ead:date>
@@ -59,7 +59,7 @@
                             <xsl:value-of select="$creation/text()"/>
                         </ead:item>
                     </xsl:when>
-                    <xsl:when test="$creation">
+                    <xsl:when test="$creation">ffffffffffffffffffff
                         <ead:date>Undated</ead:date>
                         <ead:item>
                             <xsl:value-of select="$creation/text()"/>
@@ -68,12 +68,12 @@
                     <xsl:otherwise>
                         <ead:date>Undated</ead:date>
                         <xsl:choose>
-                            <xsl:when test="$creation">
+                            <xsl:when test="$creation">gggggggggggggggggggggggg
                                 <ead:item>
                                     <xsl:value-of select="$creation/text()"/>
                                 </ead:item>
                             </xsl:when>
-                            <xsl:otherwise>
+                            <xsl:otherwise>hhhhhhhhhhhhhhhhhhhhhhhhhhhhh
                                 <ead:item>Finding aid created by IISH Collection Processing Department</ead:item>
                             </xsl:otherwise>
                         </xsl:choose>
