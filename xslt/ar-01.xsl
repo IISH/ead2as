@@ -18,21 +18,27 @@
 
         <xsl:if test="not(//ead:eadheader/ead:revisiondesc)">
             <ead:revisiondesc>
-                <ead:change><xsl:choose>
-                    <xsl:when test="$creation/ead:date">
-                        <ead:date calendar="gregorian" era="ce">
-                            <xsl:attribute name="normal"><xsl:value-of select="$creation/ead:date/text()"/></xsl:attribute>
-                            <xsl:value-of select="$creation/ead:date"/>
-                        </ead:date>
-                    </xsl:when>
-                    <xsl:otherwise>
-                        <ead:date>Undated</ead:date>
-                    </xsl:otherwise></xsl:choose>
+                <ead:change>
                     <xsl:choose>
-                        <xsl:when test="$creation"><ead:item><xsl:value-of select="$creation/text()"/></ead:item></xsl:when>
-                        <xsl:otherwise><ead:item>Finding aid created by IISH Collection Processing Department</ead:item></xsl:otherwise>
+                        <xsl:when test="$creation/ead:date">
+                            <ead:date calendar="gregorian" era="ce">
+                                <xsl:value-of select="$creation/ead:date"/>
+                            </ead:date>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <ead:date>Undated</ead:date>
+                        </xsl:otherwise>
                     </xsl:choose>
-
+                    <xsl:choose>
+                        <xsl:when test="$creation">
+                            <ead:item>
+                                <xsl:value-of select="$creation/text()"/>
+                            </ead:item>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <ead:item>Finding aid created by IISH Collection Processing Department</ead:item>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </ead:change>
             </ead:revisiondesc>
         </xsl:if>
@@ -47,7 +53,6 @@
                 <xsl:choose>
                     <xsl:when test="$creation/ead:date">
                         <ead:date calendar="gregorian" era="ce">
-                            <xsl:attribute name="normal"><xsl:value-of select="$creation/ead:date/text()"/></xsl:attribute>
                             <xsl:value-of select="$creation/ead:date"/>
                         </ead:date>
                         <ead:item>
@@ -63,8 +68,14 @@
                     <xsl:otherwise>
                         <ead:date>Undated</ead:date>
                         <xsl:choose>
-                            <xsl:when test="$creation"><ead:item><xsl:value-of select="$creation/text()"/></ead:item></xsl:when>
-                            <xsl:otherwise><ead:item>Finding aid created by IISH Collection Processing Department</ead:item></xsl:otherwise>
+                            <xsl:when test="$creation">
+                                <ead:item>
+                                    <xsl:value-of select="$creation/text()"/>
+                                </ead:item>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <ead:item>Finding aid created by IISH Collection Processing Department</ead:item>
+                            </xsl:otherwise>
                         </xsl:choose>
                     </xsl:otherwise>
                 </xsl:choose>

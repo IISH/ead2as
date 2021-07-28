@@ -1,5 +1,7 @@
 package org;
 
+import org.w3c.dom.Node;
+
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.regex.Matcher;
@@ -56,7 +58,7 @@ public class Utils {
 
         final StringBuilder sb = new StringBuilder();
 
-        for ( int i = 0 ; i < nodelist.getLength(); i++) {
+        for (int i = 0; i < nodelist.getLength(); i++) {
 
             final String text = nodelist.item(i).getNodeValue();
             sb.append(text).append(" | ");
@@ -94,7 +96,7 @@ public class Utils {
     public static String normalDate(String text) {
         return text.replaceAll("-", "");
     }
-    
+
     public static String extent(String text) {
 
         final StringBuilder sb = new StringBuilder();
@@ -102,7 +104,7 @@ public class Utils {
         final String[] keys = text.split(" "); // 98.52 Meters wordt ["98.52", "Meters"]
         for (String key : keys) {
             final String value = map.get(key.replace("'", "").replace("’", "").replace(".", "").toLowerCase());
-            if ( value == null ) {
+            if (value == null) {
                 sb.append(key);
             } else {
                 sb.append(value);
@@ -111,5 +113,23 @@ public class Utils {
         }
 
         return sb.toString().trim();
+    }
+
+    // https://jira.socialhistoryservices.org/browse/AR-39
+    public static boolean isUnitDate(org.w3c.dom.Node node) {
+        final Node previousSibling = node.getPreviousSibling();
+        if (previousSibling != null) {
+            final String text = previousSibling.getNodeValue().trim();
+            if (text.endsWith(".")) {
+                final Node nextSibling = node.getNextSibling();
+                if (nextSibling == null) return true;
+                for (byte b : nextSibling.getNodeValue().trim().getBytes()) { // alleen scheidingstekens, e.a.
+                    if (b > 64) return false;
+                }
+                return true;
+            }
+        }
+
+        return false;
     }
 }
