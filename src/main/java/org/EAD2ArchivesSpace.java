@@ -19,7 +19,7 @@ public class EAD2ArchivesSpace {
     private ArrayList<Transformer> transformers = new ArrayList(2);
     private static Validate validate;
 
-    private EAD2ArchivesSpace() {
+    private EAD2ArchivesSpace(String xslt) {
 
         try {
             validate = new Validate();
@@ -27,53 +27,18 @@ public class EAD2ArchivesSpace {
             e.printStackTrace();
         }
 
-//        final String[] _transformers = {
-//                "/identity.xsl"
-//        };
+        final File[] _transformers = new File(xslt).listFiles((dir, name) -> name.toLowerCase().endsWith(".xsl"));
+        if (_transformers == null) {
+            System.err.println("Folder is leeg: " + xslt);
+            System.exit(-1);
+        }
+        Arrays.sort(_transformers);
 
-//        final String[] _transformers = {
-//                "/rapport-ar-12.xsl"
-//        };
-
-        final String[] _transformers = {
-                "/ar-1.xsl",
-                "/ar-2.xsl",
-                "/ar-3.xsl",
-                "/ar-4.xsl",
-                "/ar-8.xsl",
-                "/ar-11.xsl",
-                "/ar-12.xsl",
-                "/ar-12-descgrp.xsl", // deze is nodig, want ar-12.xsl maakt anders invalide ead met lege descgrp elementen
-                "/ar-13.xsl",
-                "/ar-19.xsl",
-                "/ar-20.xsl",
-                "/ar-21.xsl",
-                "/ar-22.xsl", // Deze is lastig, want die maakt invalide ead
-                "/ar-22.xsl", // Herhaal, omdat een verwijdert leeg element de ouder ook leeg kan maken
-                "/ar-22.xsl", // "
-                "/ar-22.xsl", // "
-                "/ar-22.xsl", // "
-                "/ar-24.xsl",
-                "/ar-27.xsl",
-                "/ar-29.xsl",
-                "/ar-30.xsl",
-                "/ar-37.xsl",
-                "/ar-38.xsl"
-        };
-
-        for (String _transformer : _transformers) {
-
-            final URL resource = this.getClass().getResource(_transformer);
-            Source source = null;
+        for (File _transformer : _transformers) {
+            final Source source = new StreamSource(_transformer);
+            source.setSystemId(_transformer.getPath());
             try {
-                source = new StreamSource(resource.openStream());
-            } catch (IOException e) {
-                System.err.println(e.getMessage());
-                System.exit(-1);
-            }
-
-            source.setSystemId(resource.toString());
-            try {
+                System.out.println("Reading xslt " + _transformer.getPath());
                 transformers.add(tf.newTransformer(source));
             } catch (TransformerConfigurationException e) {
                 System.err.println(e.getMessage());
@@ -102,7 +67,7 @@ public class EAD2ArchivesSpace {
 
             final int length = (int) source_file.length();
             byte[] record = new byte[length];
-            source.read(record, 0, length);
+            int i = source.read(record, 0, length);
             final String name = source_file.getName();
 
             for (Transformer transformer : transformers) {
@@ -123,7 +88,7 @@ public class EAD2ArchivesSpace {
                 }
             }
 
-            System.out.println("source:" + source_file.getAbsolutePath() + " validate:" + validateIt + " length:" + length + " target:" + target.getAbsolutePath());
+            System.out.println("{source:" + source_file.getAbsolutePath() + ", validate:" + validateIt + ", length:" + length + ", read:" + i + ", target:" + target.getAbsolutePath() + "}");
         }
     }
 
@@ -143,11 +108,13 @@ public class EAD2ArchivesSpace {
     public static void main(String[] args) throws IOException, TransformerException {
 
         final String in = args[0];
-        final String out = args[1];
-        final boolean validateIt = args.length != 3 || Boolean.parseBoolean(args[2]);
+        final String xslt = args[1];
+        final String out = args[2];
+        final boolean validateIt = args.length != 4 || Boolean.parseBoolean(args[3]);
 
         System.out.println("In " + in);
+        System.out.println("Xslt " + xslt);
         System.out.println("Out " + out);
-        new EAD2ArchivesSpace().run(in, out, validateIt);
+        new EAD2ArchivesSpace(xslt).run(in, out, validateIt);
     }
 }

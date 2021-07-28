@@ -3,6 +3,8 @@
                 xmlns:xlink="http://www.w3.org/1999/xlink"
                 exclude-result-prefixes="ead xlink">
 
+    <xsl:variable name="count_physdesc" select="count(//ead:physdesc[ead:extent])"/>
+
     <xsl:template match="node() | @*">
         <xsl:copy>
             <xsl:apply-templates select="node() | @*"/>
@@ -24,6 +26,7 @@
                 <xsl:when test="$is_not_file_bytes_groep > 1">Part</xsl:when>
                 <xsl:when test="$is_file_bytes_groep > 2">Part</xsl:when>
                 <xsl:when test="$is_not_file_bytes_groep = 1 and $is_file_bytes_groep > 0">Part</xsl:when>
+                <xsl:when test="$count_physdesc > 1">Part</xsl:when>
                 <xsl:otherwise>Whole</xsl:otherwise>
             </xsl:choose>
         </xsl:variable>

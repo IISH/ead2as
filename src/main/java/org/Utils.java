@@ -33,6 +33,7 @@ public class Utils {
         map.put("glasdias", "Lantern slides");
         map.put("glasdia", "Lantern slides");
         map.put("glasnegatieven", "Glass negatives");
+        map.put("m", "Meters");
         map.put("mb", "Megabytes");
         map.put("microfiches", "Microfiches");
         map.put("microfilms", "Microfilms");
@@ -94,16 +95,15 @@ public class Utils {
         return text.replaceAll("-", "");
     }
     
-    public static String extent(String _text) {
-        final String text = _text.replace("'", "").replace("’", "").toLowerCase();
+    public static String extent(String text) {
 
         final StringBuilder sb = new StringBuilder();
 
-        final String[] keys = text.split(" ");
+        final String[] keys = text.split(" "); // 98.52 Meters wordt ["98.52", "Meters"]
         for (String key : keys) {
-            final String value = map.get(key);
+            final String value = map.get(key.replace("'", "").replace("’", "").replace(".", "").toLowerCase());
             if ( value == null ) {
-                sb.append(_text);
+                sb.append(key);
             } else {
                 sb.append(value);
             }
