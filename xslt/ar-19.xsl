@@ -13,6 +13,7 @@
     <xsl:template match="ead:unitdate[.='']"/>
     <xsl:template match="ead:unitdate[.=' ']"/>
     <xsl:template match="ead:unitdate[.=',']"/>
+    <xsl:template match="ead:unitdate[.='.']"/>
 
 </xsl:stylesheet>
 

@@ -10,7 +10,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:unitdate[last()]">
+    <xsl:template match="ead:unittitle/ead:unitdate">
         <xsl:choose>
             <xsl:when test="ext:isUnitDate(.)">
                 <xsl:copy>
@@ -21,10 +21,6 @@
                 <xsl:value-of select="text()"/>
             </xsl:otherwise>
         </xsl:choose>
-    </xsl:template>
-
-    <xsl:template match="ead:unitdate">
-        <xsl:value-of select="text()"/>
     </xsl:template>
 
 </xsl:stylesheet>
