@@ -15,5 +15,11 @@
             <xsl:apply-templates select="text()|@*"/>
         </xsl:copy>
     </xsl:template>
+    <xsl:template match="ead:controlaccess/ead:persname[not(@audience)]|ead:controlaccess/ead:corpname[not(@audience)]">
+        <xsl:copy>
+            <xsl:attribute name="audience">external</xsl:attribute>
+            <xsl:apply-templates select="text()|@*"/>
+        </xsl:copy>
+    </xsl:template>
 
 </xsl:stylesheet>
