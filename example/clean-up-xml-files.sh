@@ -32,26 +32,32 @@ cd ..
 
 # remove empty tags (1) example <tag:sub />
 SOURCE=temp1
-TARGET=temp4
-mkdir -p $TARGET ; cd $SOURCE || exit
-for FILE in *.xml; do
-   sed -E 's/<[a-zA-Z]+:?[a-zA-Z]* *\/>//g' "$FILE" > "../$TARGET/$FILE"
+for i in {1..4}; do
+   TARGET=temp4.${i}
+   mkdir -p $TARGET ; cd $SOURCE || exit
+   for FILE in *.xml; do
+      sed -E 's/<[a-zA-Z]+:?[a-zA-Z]* *\/>//g' "$FILE" > "../$TARGET/$FILE"
+   done
+   cd ..
+   SOURCE=temp4.${i}
 done
-cd ..
 
 
 # remove empty tags (2)
-SOURCE=temp4
-TARGET=temp5
-mkdir -p $TARGET ; cd $SOURCE || exit
-for FILE in *.xml; do
-   sed -E 's/<([a-zA-Z]+:?[a-zA-Z]*) *><\/\1 *>//g' "$FILE" > "../$TARGET/$FILE"
+SOURCE=temp4.${i}
+for j in {1..4}; do
+   TARGET=temp5.${j}
+   mkdir -p $TARGET ; cd $SOURCE || exit
+   for FILE in *.xml; do
+      sed -E 's/<([a-zA-Z]+:?[a-zA-Z]*) *><\/\1 *>//g' "$FILE" > "../$TARGET/$FILE"
+   done
+   cd ..
+   SOURCE=temp5.${j}
 done
-cd ..
 
 
 # remove dummy data from lb
-SOURCE=temp5
+SOURCE=temp5.${j}
 cd $SOURCE || exit
 for FILE in *.xml; do
    sed -i 's/<lb>_DUMMY_DATA_<\/lb>/<lb\/>/g' "$FILE"
@@ -60,7 +66,7 @@ cd ..
 
 
 # verwijder overbodige namespace
-SOURCE=temp5
+SOURCE=temp5.${j}
 TARGET=temp6
 mkdir -p $TARGET ; cd $SOURCE || exit
 for FILE in *.xml; do
@@ -80,6 +86,7 @@ cd ..
 
 
 rm -rf temp?/
+rm -rf temp?.?/
 
 
 # print one xml file
