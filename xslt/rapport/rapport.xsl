@@ -75,8 +75,24 @@
 <!--        https://jira.socialhistoryservices.org/browse/AR-37-->
         <xsl:variable name="cxx_zonder_unittitle_unitdate" select="count(//ead:c01/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c02/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c03/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c04/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c05/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c06/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c07/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c08/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c09/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c10/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c11/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0]|//ead:c12/ead:did[count(ead:unittitle) = 0 and count(ead:unitdate) = 0])"/>
 
+<!--        https://jira.socialhistoryservices.org/browse/AR-48-->
+        <xsl:variable name="repo">
+            <xsl:variable name="corpname" select="normalize-space(ead:archdesc/ead:did/ead:repository/ead:corpname/text())"/>
+            <xsl:choose>
+                <xsl:when test="$corpname='International Institute of Social History'">IISG</xsl:when>
+                <xsl:when test="$corpname='Internationaal Instituut voor Sociale Geschiedenis'">IISG</xsl:when>
+                <xsl:when test="$corpname='Nederlandsch Economisch-Historisch Archief (NEHA)'">NEHA</xsl:when>
+                <xsl:when test="$corpname='Het Staatsarchief'">SVZ</xsl:when>
+                <xsl:when test="$corpname='Nederlands Instituut voor Beeld en Geluid'">NIBG</xsl:when>
+                <xsl:when test="$corpname='Internationaal Homo/Lesbisch Informatiecentrum en Archief (IHLIA)'">IHLIA</xsl:when>
+                <xsl:when test="$corpname='Historisch Beeldarchief Migranten (HBM)'">HBM</xsl:when>
+                <xsl:otherwise>onbekend</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+
         <xsl:value-of
-                select="concat($cxx_unittitle, $k, $lb_in_unittitle, $k, $physdesc_extent_item_encodinganalog_300a,$k, $physdesc_extent_bytes_encodinganalog_300a, $k, $cxx_geen_atribuut_level, $k, $physdesc_extent_kommagetal, $k, $odd_in_odd, $k, $langusage_language, $k, $dsc_head_note, $k, $dsc_note_type, $k, $dsc_odd_type, $k, $note_unitdate, $k, $physdesc_genreform, $k, $physdesc_language, $k, $physdesc_origination, $k, $bytes_meter_item, $k, $extent_ca, $k, $cxx_zonder_unittitle_unitdate)"/>
+                select="concat($cxx_unittitle, $k, $lb_in_unittitle, $k, $physdesc_extent_item_encodinganalog_300a,$k, $physdesc_extent_bytes_encodinganalog_300a, $k, $cxx_geen_atribuut_level, $k, $physdesc_extent_kommagetal, $k, $odd_in_odd, $k, $langusage_language, $k, $dsc_head_note, $k, $dsc_note_type, $k, $dsc_odd_type, $k, $note_unitdate, $k, $physdesc_genreform, $k, $physdesc_language, $k, $physdesc_origination, $k, $bytes_meter_item, $k, $extent_ca, $k, $cxx_zonder_unittitle_unitdate, $repo)"/>
+
 
     </xsl:template>
 
