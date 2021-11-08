@@ -1,19 +1,20 @@
 #!/bin/bash
 
 # Zet deze NS in de /etc/hosts als
-# 10.26.1.5 10.26.1.6 10.26.1.7 10.26.1.8 10.26.1.9 as-backend-acc.collections.iisg.org
 
 FINAL="$1" && [ ! -d "$FINAL" ] && echo "./import.sh [pad naar folder met ead documenten] [file van rapportage] ontbreekt" && exit 1
 RAPPORT="$2" && [ ! -f "$FINAL" ] && echo "./import.sh [pad naar folder met ead documenten] [file van rapportage] ontbreekt" && exit 1
+ADMIN_USERNAME="$3" && [ -z "$ADMIN_USERNAME" ] && echo "Naam rol admin gebruiker nodig."
+ADMIN_PASSWORD="$4" && [ -z "$ADMIN_PASSWORD" ] && echo "Password nodig."
 
 URL="http://as-backend-acc.collections.iisg.org"
-JSON="${home}/jsonmodel_from_format"
-LOG="log"
+JSON="${FINAL}/jsonmodel_from_format"
+LOG="${FINAL}/log"
 
-mkdir "$JSON" "$RESULT"
+mkdir "$JSON" "$LOG"
 
 # De sessie
-echo "export TOKEN=$(curl -Fpassword=admin http://$URL/users/admin/login | jq '.session')" >.session
+echo "export TOKEN=$(curl -Fpassword=${ADMIN_PASSWORD} http://$URL/users/${ADMIN_USERNAME}/login | jq '.session')" >.session
 source .session
 ([ -n "$TOKEN" ] && echo "$TOKEN") || (echo "Geen token?" && exit 1) # De curl oproep zet de sessie id.
 
