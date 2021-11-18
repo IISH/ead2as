@@ -58,7 +58,6 @@ while read -r line; do
   (eval "$CMD" && echo "OK format ${ead_file}" >> "$LOG") || echo "BAD format ${ead_file}" >> "$LOG"
 
   grep -q "SESSION_GONE" "$asmodel_file" && login && continue
-  grep -q "504 Gateway Time-out" "$asmodel_file" && login && continue
 
   log_file="${JSON}/${name}.log" && [ -f "$log_file" ] && rm "$log_file"
   CMD="/usr/bin/curl -H 'Content-Type: application/json' -H 'X-ArchivesSpace-Session: ${TOKEN}' -X POST -d @${asmodel_file} -o ${log_file} '${URL}/repositories/${repo}/batch_imports'"
