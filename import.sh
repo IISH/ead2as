@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Zet deze NS in de /etc/hosts als
-
 FINAL="$1" && [ ! -d "$FINAL" ] && echo "./import.sh [pad naar folder met ead documenten] [file van rapportage] ontbreekt" && exit 1
 RAPPORT="$2" && [ ! -f "$RAPPORT" ] && echo "./import.sh [pad naar folder met ead documenten] [file van rapportage] ontbreekt" && exit 1
 ADMIN_USERNAME="$3" && [ -z "$ADMIN_USERNAME" ] && echo "Naam rol admin gebruiker nodig." && exit 1
@@ -26,6 +24,7 @@ login
 while read -r line; do
   IFS=',' read -r name a b c d e f g h i j k l m n o p q r repository <<<"$line"
 
+  # We geven de variablele 'repo' het nummer van de archivesspace repository identifier.
   case "$repository" in
   'IISG')
     repo="2"
@@ -50,6 +49,7 @@ while read -r line; do
     ;;
   esac
 
+  # Eerst vragen we archivesspace de XML om te zetten in het AS json datamodel
   ead_file="${FINAL}/${name}.xml" && [ ! -f "$ead_file" ] && echo "File not found ${ead_file}" >> "$LOG" && continue
   asmodel_file="${JSON}/${name}.json"
   [ -f "$asmodel_file" ] && [ -z "$OPNIEUW" ] && echo "Skip ${asmodel_file}" && continue
@@ -57,8 +57,11 @@ while read -r line; do
   echo "$CMD"
   (eval "$CMD" && echo "OK format ${ead_file}" >> "$LOG") || echo "BAD format ${ead_file}" >> "$LOG"
 
+  # Hebben we nog een sessie?
   grep -q "SESSION_GONE" "$asmodel_file" && login && continue
 
+
+  # Nu importeren we het json model in AS in de repository.
   log_file="${JSON}/${name}.log" && [ -f "$log_file" ] && rm "$log_file"
   CMD="/usr/bin/curl -H 'Content-Type: application/json' -H 'X-ArchivesSpace-Session: ${TOKEN}' -X POST -d @${asmodel_file} -o ${log_file} '${URL}/repositories/${repo}/batch_imports'"
   echo "$CMD"
