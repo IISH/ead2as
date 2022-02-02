@@ -9,6 +9,11 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:daogrp/ead:daoloc[@xlink:label='pdf']"/>
+    <xsl:template match="ead:daogrp[ead:daoloc]">
+        <xsl:variable name="h" select="ead:daoloc[position()=1]/@xlink:href"/>
+        <ead:daogrp xlink:type="extended">
+            <ead:daoloc href="{substring-before($h, '?')}" xlink:type="locator"/>
+        </ead:daogrp>
+    </xsl:template>
 
 </xsl:stylesheet>
