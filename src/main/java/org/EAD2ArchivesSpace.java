@@ -19,10 +19,10 @@ public class EAD2ArchivesSpace {
     private ArrayList<Transformer> transformers = new ArrayList(2);
     private static Validate validate;
 
-    private EAD2ArchivesSpace(String xslt) {
+    private EAD2ArchivesSpace(String xslt) throws TransformerConfigurationException, IOException {
 
         try {
-            validate = new Validate();
+            validate = new Validate("ead");
         } catch (SAXException e) {
             e.printStackTrace();
         }

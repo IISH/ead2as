@@ -9,7 +9,7 @@
         </xsl:copy>
     </xsl:template>
 
-    <xsl:template match="ead:scopecontent/ead:note">
+    <xsl:template match="ead:bioghist/ead:note|ead:scopecontent/ead:note">
         <xsl:for-each select="node()">
             <xsl:copy>
                 <xsl:apply-templates select="node() | @*"/>
