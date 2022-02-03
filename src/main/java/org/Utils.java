@@ -3,7 +3,6 @@ package org;
 import org.w3c.dom.Node;
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -132,5 +131,9 @@ public class Utils {
         }
 
         return false;
+    }
+
+    public static String urlDecode(String text) {
+        return java.net.URLDecoder.decode(text);
     }
 }
