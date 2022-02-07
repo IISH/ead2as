@@ -91,7 +91,7 @@
         </xsl:variable>
 
         <xsl:value-of
-                select="concat($cxx_unittitle, $k, $lb_in_unittitle, $k, $physdesc_extent_item_encodinganalog_300a,$k, $physdesc_extent_bytes_encodinganalog_300a, $k, $cxx_geen_atribuut_level, $k, $physdesc_extent_kommagetal, $k, $odd_in_odd, $k, $langusage_language, $k, $dsc_head_note, $k, $dsc_note_type, $k, $dsc_odd_type, $k, $note_unitdate, $k, $physdesc_genreform, $k, $physdesc_language, $k, $physdesc_origination, $k, $bytes_meter_item, $k, $extent_ca, $k, $cxx_zonder_unittitle_unitdate, $k, $repo)"/>
+                select="concat($repo, $k, $cxx_unittitle, $k, $lb_in_unittitle, $k, $physdesc_extent_item_encodinganalog_300a,$k, $physdesc_extent_bytes_encodinganalog_300a, $k, $cxx_geen_atribuut_level, $k, $physdesc_extent_kommagetal, $k, $odd_in_odd, $k, $langusage_language, $k, $dsc_head_note, $k, $dsc_note_type, $k, $dsc_odd_type, $k, $note_unitdate, $k, $physdesc_genreform, $k, $physdesc_language, $k, $physdesc_origination, $k, $bytes_meter_item, $k, $extent_ca, $k, $cxx_zonder_unittitle_unitdate)"/>
 
 
     </xsl:template>

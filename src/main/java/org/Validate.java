@@ -16,6 +16,7 @@ public class Validate {
 
     final Validator validator;
     Transformer transformer;
+    boolean outcome = true;
 
     public Validate(String _schema) throws SAXException, IOException {
 
@@ -29,13 +30,18 @@ public class Validate {
         validator = schema.newValidator();
 
         final URL _transformer = this.getClass().getResource("/" + _schema + ".xsl");
-        final Source source = new StreamSource(_transformer.openStream());
+        final Source source = new StreamSource(Objects.requireNonNull(_transformer).openStream());
         source.setSystemId(_transformer.getPath());
         try {
             this.transformer = TransformerFactory.newInstance().newTransformer(source);
         } catch (TransformerConfigurationException e) {
             e.printStackTrace();
+            this.outcome = false;
         }
+    }
+
+    public int getStatus() {
+        return this.outcome ? 0 : 1;
     }
 
     public String validate(File file) {
@@ -47,6 +53,7 @@ public class Validate {
         try {
             transformer.transform(source, new StreamResult(baos));
         } catch (TransformerException e) {
+            this.outcome = false;
             return "BAD: " + e;
         }
 
@@ -54,8 +61,10 @@ public class Validate {
             validator.validate( new StreamSource (new ByteArrayInputStream(baos.toByteArray())));
             return "OK";
         } catch (SAXException ex) {
+            this.outcome = false;
             return "BAD: " + ex;
         } catch (IOException ex) {
+            this.outcome = false;
             return "BAD: Could not read file";
         }
     }
@@ -72,6 +81,8 @@ public class Validate {
             final String result = validate.validate(file);
             System.out.println(file.getName() + " " + result);
         };
+
+        System.exit(validate.getStatus());
     }
 
 }
