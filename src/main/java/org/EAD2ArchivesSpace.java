@@ -25,6 +25,7 @@ public class EAD2ArchivesSpace {
             validate = new Validate("ead");
         } catch (SAXException e) {
             e.printStackTrace();
+            System.exit(-1);
         }
 
         final File[] _transformers = new File(xslt).listFiles((dir, name) -> name.toLowerCase().endsWith(".xsl"));

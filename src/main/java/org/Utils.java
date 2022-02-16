@@ -1,6 +1,7 @@
 package org;
 
 import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 
 import java.util.HashMap;
 import java.util.regex.Matcher;
@@ -131,6 +132,40 @@ public class Utils {
         }
 
         return false;
+    }
+
+    public static String shortTitle(NodeList list) {
+        return shortTitle(list.item(0));
+    }
+
+    private static String shortTitle(Node node) {
+        return shortTitle(node.getTextContent());
+    }
+
+    private static int limit = 75;
+
+    private static String shortTitle(String _text) {
+
+        if (_text == null) return null;
+        final String[] __text = _text.trim().split("[\\\\,/\\.;:\\]\\[]");
+        final String text = __text[0];
+
+        if (text.isEmpty()) return null;
+
+        final int length = text.length();
+
+        final StringBuilder sb = new StringBuilder(length);
+        final String[] tokens = text.split(" ");
+
+        int size = 0;
+        for (String _token : tokens) {
+            final String token = _token.trim();
+            sb.append(token);
+            size += token.length();
+            if (size > limit) return sb.toString() + "...";
+            if (token.length() != 0 ) sb.append(" ");
+        }
+        return sb.toString().trim();
     }
 
     public static String urlDecode(String text) {
