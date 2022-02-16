@@ -135,6 +135,7 @@ public class Utils {
     }
 
     public static String shortTitle(NodeList list) {
+        if ( list.getLength() == 0) return null;
         return shortTitle(list.item(0));
     }
 
