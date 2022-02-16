@@ -149,6 +149,7 @@ public class Utils {
 
         if (_text == null) return null;
         final String[] __text = _text.trim().split("[\\\\,/\\.;:\\]\\[]");
+        if ( __text.length == 0) return _text.trim();
         final String text = __text[0];
 
         if (text.isEmpty()) return null;
