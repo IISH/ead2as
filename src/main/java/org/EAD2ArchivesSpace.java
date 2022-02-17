@@ -81,7 +81,7 @@ public class EAD2ArchivesSpace {
 
             if (validateIt) {
                 final String msg = validate.validate(target);
-                if (msg == null) {
+                if (msg.equalsIgnoreCase("OK")) {
                     // ok
                 } else {
                     System.out.println("Invalid EAD xml document: " + target.getAbsolutePath());
