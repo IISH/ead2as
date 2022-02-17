@@ -16,7 +16,7 @@
         <xsl:element name="ead:daogrp">
             <xsl:attribute name="xlink:type">extended</xsl:attribute>
             <xsl:if test="string-length($unittitle)!=0">
-                <xsl:attribute name="title"><xsl:value-of select="$unittitle"/></xsl:attribute>
+                <xsl:attribute name="xlink:title"><xsl:value-of select="$unittitle"/></xsl:attribute>
             </xsl:if>
             <ead:daoloc xlink:href="{substring-before(ext:urlDecode($h), '?')}" xlink:type="locator" xlink:label="handle"/>
         </xsl:element>
