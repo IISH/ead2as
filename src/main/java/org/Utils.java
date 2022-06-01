@@ -143,29 +143,19 @@ public class Utils {
         return shortTitle(node.getTextContent());
     }
 
-    private static int limit = 75;
-
     private static String shortTitle(String _text) {
 
         if (_text == null) return null;
-        final String[] __text = _text.trim().split("[\\\\,/\\.;:\\]\\[]");
+        final String[] __text = _text.trim().split("[\\\\,?/\\.;:\\]\\[]");
         if ( __text.length == 0) return _text.trim();
-        final String text = __text[0];
 
-        if (text.isEmpty()) return null;
-
-        final int length = text.length();
-
-        final StringBuilder sb = new StringBuilder(length);
-        final String[] tokens = text.split(" ");
-
-        int size = 0;
-        for (String _token : tokens) {
-            final String token = _token.trim();
-            sb.append(token);
-            size += token.length();
-            if (size > limit) return sb.toString() + "...";
-            if (token.length() != 0 ) sb.append(" ");
+        final StringBuilder sb = new StringBuilder();
+        for (String text : __text) {
+            final String t = text.trim();
+            if ( t.length() != 0) {
+                sb.append(t);
+                sb.append(" ");
+            }
         }
         return sb.toString().trim();
     }
